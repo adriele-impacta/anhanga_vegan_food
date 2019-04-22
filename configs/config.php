@@ -3,8 +3,8 @@ session_start();
 
 $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';
 
-define('URL', $protocol . $_SERVER['HTTP_HOST'] . '/novo/');
-define('LOC', $_SERVER['DOCUMENT_ROOT'].'/novo/');
+define('URL', $protocol . $_SERVER['HTTP_HOST'] . '/anhanga_vegan_food/');
+define('LOC', $_SERVER['DOCUMENT_ROOT'].'/anhanga_vegan_food/');
 
 define('TEMPLATE_DIR', LOC . 'templates/');
 define('CONTROLLER_DIR', LOC . 'controller/');
