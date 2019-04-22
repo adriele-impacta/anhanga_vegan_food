@@ -6,7 +6,7 @@ $smarty = new Smarty;
 $smarty->template_dir = TEMPLATE_DIR;
 $smarty->config_dir = LOC . "configs/";
 $smarty->force_compile = false;
-$smarty->debugging = false;
+$smarty->debugging = true;
 //$smarty->configLoad('general.conf');
 $smarty->assign("URL", URL);
 $smarty->assign("LOC", LOC);
@@ -15,7 +15,6 @@ $smarty->assign("IMG_DIR", IMG_DIR);
 $smarty->assign("ano", date('Y'));
 class Telas extends Smarty
 {
-
     public function home()
     {
         global $smarty;

@@ -8,7 +8,10 @@ include_once CLASSES_DIR . "class.database.php";
 require_once CLASSES_DIR . "telas.class.php";
 
 $tela = new Telas();
-switch ($pagina) {
+
+
+switch ($pagina) {      
+
     case 'produtos':
         if (isset($acao)) {
             require_once CONTROLLER_DIR . "$pagina/$acao.php";
