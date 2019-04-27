@@ -1,12 +1,11 @@
 <?php
-
 require_once LOC . 'lib/smarty/Smarty.class.php';
 
 $smarty = new Smarty;
 $smarty->template_dir = TEMPLATE_DIR;
 $smarty->config_dir = LOC . "configs/";
 $smarty->force_compile = false;
-$smarty->debugging = true;
+$smarty->debugging = false;
 //$smarty->configLoad('general.conf');
 $smarty->assign("URL", URL);
 $smarty->assign("LOC", LOC);
@@ -39,6 +38,7 @@ class Telas extends Smarty
     public function tipo_produto()
     {
         global $smarty;
+        $smarty->assign("id_pagina", "tipo_produto");
         $smarty->assign("nome_pagina", "Tipos de produto");
         $smarty->assign("menu_ativo", "produtos");
         

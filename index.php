@@ -4,12 +4,9 @@ require_once './configs/config.php';
 $pagina = filter_input(INPUT_GET, 'pagina', FILTER_SANITIZE_STRING);
 $acao = filter_input(INPUT_GET, 'acao', FILTER_SANITIZE_STRING);
 
-include_once CLASSES_DIR . "class.database.php";
-require_once CLASSES_DIR . "telas.class.php";
+require_once CLASSES_DIR . "Telas.class.php";
 
 $tela = new Telas();
-
-
 switch ($pagina) {      
 
     case 'produtos':

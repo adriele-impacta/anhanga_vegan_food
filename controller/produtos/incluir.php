@@ -75,8 +75,6 @@ if (isset($send)) {
         $ultimo_id = $produtos->retornaDados();
         $id = $ultimo_id->id;
 
-        $smarty->assign("id_atualiza", $id);
-
         if ($produtos->linhasAfetadas != -1) {
             $smarty->assign("class_retorno", 'success');
             $smarty->assign("msg_retorno", 'Inserido com sucesso');

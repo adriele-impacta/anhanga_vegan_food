@@ -42,7 +42,7 @@ if (isset($_GET['send'])) {
         $descricao_produto = filter_input(INPUT_POST, 'descricao_produto', FILTER_SANITIZE_SPECIAL_CHARS);
         $valor = filter_input(INPUT_POST, 'valor', FILTER_VALIDATE_FLOAT);
 
-        if (isset($_FILES['files'])) {
+        if ($_FILES['files']['name'] != "") {
 
             $errors = array();
             $file_name = $_FILES['files']['name'];
@@ -69,6 +69,9 @@ if (isset($_GET['send'])) {
         } else {
             $produtos->delCampo('imagem');
         }
+
+
+
         $produtos->delCampo('id');
         $produtos->delCampo('promocao');
         $produtos->delCampo('dt_criacao');

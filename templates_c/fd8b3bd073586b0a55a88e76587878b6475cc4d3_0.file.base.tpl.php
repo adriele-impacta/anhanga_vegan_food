@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-04-28 00:31:07
+  from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5cc4d82bda0239_06676621',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
+    array (
+      0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
+      1 => 1556404264,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5cc4d82bda0239_06676621 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -7,32 +30,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="{$LIB_DIR}css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="{$LIB_DIR}vendor/chartist/css/chartist-custom.css">
-    <link rel="stylesheet" href="{$LIB_DIR}css/datatables.css" />
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/chartist/css/chartist-custom.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+css/datatables.css" />
 
 
     <!-- MAIN CSS -->
-    {if isset($upload_arquivo)}
-    <link rel="stylesheet" href="{$LIB_DIR}css/jquery.fileupload.css">
-    {/if}
-    <link rel="stylesheet" href="{$LIB_DIR}css/main.css">
+    <?php if (isset($_smarty_tpl->tpl_vars['upload_arquivo']->value)) {?>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+css/jquery.fileupload.css">
+    <?php }?>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+css/main.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{$LIB_DIR}img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{$LIB_DIR}img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+img/favicon.png">
 
     <!-- VENDOR SCRIPTS -->
-    <script src="{$LIB_DIR}vendor/jquery/jquery.min.js"></script>
-    <script src="{$LIB_DIR}vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="{$LIB_DIR}vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="{$LIB_DIR}vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-    <script src="{$LIB_DIR}vendor/chartist/js/chartist.min.js"></script>
-    <script src="{$LIB_DIR}js/klorofil-common.js"></script>
-   <script src="{$LIB_DIR}js/datatables.js"></script>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/jquery-slimscroll/jquery.slimscroll.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/chartist/js/chartist.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+js/klorofil-common.js"><?php echo '</script'; ?>
+>
+   <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+js/datatables.js"><?php echo '</script'; ?>
+>
 </head>
 
 
@@ -42,7 +93,8 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                <a href="index.html"><img src="{$LIB_DIR}img/logo-dark.png" alt="Anhangá Logo"
+                <a href="index.html"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+img/logo-dark.png" alt="Anhangá Logo"
                         class="img-responsive logo"></a>
             </div>
             <div class="container-fluid">
@@ -77,9 +129,7 @@
                                     class="icon-submenu fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
-                                {*<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-                                <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>*}
-                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
+                                                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
                             </ul>
                         </li>
                         <!-- <li>
@@ -96,12 +146,14 @@
                 <nav>
                     <ul class="nav">
                         <li>
-                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed {if $menu_ativo == "pedidos"}active{/if}"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
+                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "pedidos") {?>active<?php }?>"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_pedidos" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=pedidos" class="">Pedidos</a></li>
-                                    <li><a href="{$URL}index.php?pagina=historico_pedidos" class="">Histórico de Pedidos</a></li>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=pedidos" class="">Pedidos</a></li>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=historico_pedidos" class="">Histórico de Pedidos</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -109,12 +161,14 @@
                         <li><a href="tables.html" class=""><i class="fa fa-list-alt"></i> <span>Cardápio</span></a></li>
 
                         <li>
-                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed {if $menu_ativo == "produtos"}active{/if}"> <i class="fa fa-box-open"></i> <span>Produtos</span> 
+                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "produtos") {?>active<?php }?>"> <i class="fa fa-box-open"></i> <span>Produtos</span> 
                             <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=produtos" class="">Novo produto</a></li>
-                                    <li><a href="{$URL}index.php?pagina=tipo_produto" class="">Tipo</a></li>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=produtos" class="">Novo produto</a></li>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=tipo_produto" class="">Tipo</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -143,7 +197,8 @@
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
-                    {include file="$conteudo_pagina"}
+                    <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['conteudo_pagina']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
                 </div>
             </div>
             <!-- END MAIN CONTENT -->
@@ -159,10 +214,17 @@
     </div>
     <!-- END WRAPPER -->
 
-    {if isset($upload_arquivo)}
-    <script src="{$LIB_DIR}js/upload_arquivo.js"></script>
-    {/if}
-    <script src="{$LIB_DIR}js/app.js"></script>
+    <?php if (isset($_smarty_tpl->tpl_vars['upload_arquivo']->value)) {?>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+js/upload_arquivo.js"><?php echo '</script'; ?>
+>
+    <?php }?>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+js/app.js"><?php echo '</script'; ?>
+>
 
 </body>
-</html>
+</html><?php }
+}

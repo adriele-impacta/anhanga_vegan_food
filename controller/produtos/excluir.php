@@ -2,6 +2,8 @@
 require_once CLASSES_DIR . 'Produtos.class.php';
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+//$confirma = filter_input(INPUT_GET, 'confirma', FILTER_SANITIZE_STRING);
+
 
 $produtos = new Produtos();
 

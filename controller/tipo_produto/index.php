@@ -2,6 +2,7 @@
 require_once CLASSES_DIR . 'TipoProduto.class.php';
 
 $tipoProdutos = new TipoProduto();
+
 $lista_tipos = array();
 $tipoProdutos->selecionaTudo($tipoProdutos);
 while ($res = $tipoProdutos->retornaDados()) {
