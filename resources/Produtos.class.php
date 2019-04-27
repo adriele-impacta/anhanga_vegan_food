@@ -19,8 +19,6 @@ class Produtos extends Base{
                 "imagem" => null,
                 "dt_criacao" => null,
                 "criado_por" => null,
-             //   "dt_ult_atualizacao" => null,
-             //   "atualizado_por" => null,
                 "dt_delete" => null,
                 "deletado_por" => null              
             );
