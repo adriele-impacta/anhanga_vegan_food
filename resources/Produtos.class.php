@@ -42,7 +42,7 @@ class Produtos extends Base{
                 $this->delCampo('criado_por');
                 
                 $this->setValor('dt_delete', date('Y-m-d H:i:s'));
-                $this->setValor('deletado_por', '1');
+                $this->setValor('deletado_por', $login_usuario);
                 $this->valorPk = $id;
                 $this->atualizar($this);
                 if($this->linhasAfetadas != -1){

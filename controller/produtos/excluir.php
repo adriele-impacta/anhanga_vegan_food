@@ -18,7 +18,7 @@ $produtos->delCampo('dt_criacao');
 $produtos->delCampo('criado_por');
 
 $produtos->setValor('dt_delete', date('Y-m-d H:i:s'));
-$produtos->setValor('deletado_por', '1');
+$produtos->setValor('deletado_por', $login_usuario);
 $produtos->valorPk = $id;
 $produtos->atualizar($produtos);
 if ($produtos->linhasAfetadas != -1) {

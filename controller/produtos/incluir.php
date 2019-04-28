@@ -28,8 +28,7 @@ if (isset($send)) {
         $descricao_produto = filter_input(INPUT_POST, 'descricao_produto', FILTER_SANITIZE_SPECIAL_CHARS);
         $valor = filter_input(INPUT_POST, 'valor', FILTER_VALIDATE_FLOAT);
 
-        if (isset($_FILES['files'])) {
-
+        if ($_FILES['files']['name'] != "") {
             $errors = array();
             $file_name = $_FILES['files']['name'];
             $file_size = $_FILES['files']['size'];
@@ -46,6 +45,7 @@ if (isset($send)) {
             $new_dir = LOC . 'imagens/' . $new_name;
             if (empty($errors) == true) {
                 if (move_uploaded_file($file_tmp, $new_dir)) {
+                    $produtos->setValor('imagem', $new_name);
 
                 } else {
                     echo "Erro upload de imagem";
@@ -64,9 +64,9 @@ if (isset($send)) {
         $produtos->setValor('nome_produto', $nome_produto);
         $produtos->setValor('descricao_produto', $descricao_produto);
         $produtos->setValor('valor', $valor);
-        $produtos->setValor('imagem', $new_name);
+        
         $produtos->setValor('dt_criacao', date('Y-m-d H:i:s'));
-        $produtos->setValor('criado_por', '1');
+        $produtos->setValor('criado_por', $login_usuario);
         $produtos->inserir($produtos);
 
         $produtos->addCampo('id');

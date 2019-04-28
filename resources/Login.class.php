@@ -31,6 +31,7 @@ class Login extends Base
 
             $res = $this->retornaDados();
             $this->id_adm = $res->id_adm;
+            $this->login = $res->login;
         }
     }
 }

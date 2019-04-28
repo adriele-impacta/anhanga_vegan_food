@@ -216,7 +216,7 @@ html.fullscreen-bg, html.fullscreen-bg body, html.fullscreen-bg #wrapper {
 
 .navbar-default .brand {
   float: left;
-  padding: 30px 39px;
+  padding: 12px 39px;
   background-color: #fff;
 }
 
@@ -1459,6 +1459,10 @@ ul.activity-list>li .timestamp {
 .auth-box.lockscreen .user .name {
   font-size: 18px;
   margin-top: 10px;
+}
+
+.logo-in {
+  height: 55px;
 }
 
 @media screen and (min-width: 1440px) {

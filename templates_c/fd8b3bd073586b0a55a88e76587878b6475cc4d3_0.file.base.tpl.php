@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-28 00:31:07
+/* Smarty version 3.1.33, created on 2019-04-28 23:45:46
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc4d82bda0239_06676621',
+  'unifunc' => 'content_5cc61f0aaeafc1_29686566',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1556404264,
+      1 => 1556487941,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc4d82bda0239_06676621 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc61f0aaeafc1_29686566 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,9 +31,10 @@ function content_5cc4d82bda0239_06676621 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-css/bootstrap.css">
+vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/chartist/css/chartist-custom.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
@@ -53,7 +54,7 @@ css/main.css">
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/favicon.png">
+img/icons/logo-cachorro.png">
 
     <!-- VENDOR SCRIPTS -->
     <?php echo '<script'; ?>
@@ -80,7 +81,7 @@ vendor/chartist/js/chartist.min.js"><?php echo '</script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 js/klorofil-common.js"><?php echo '</script'; ?>
 >
-   <?php echo '<script'; ?>
+    <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 js/datatables.js"><?php echo '</script'; ?>
 >
@@ -94,8 +95,8 @@ js/datatables.js"><?php echo '</script'; ?>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
                 <a href="index.html"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/logo-dark.png" alt="Anhangá Logo"
-                        class="img-responsive logo"></a>
+img/logo-escrito.png" alt="Anhangá Logo"
+                        class="img-responsive logo-in"></a>
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
@@ -125,7 +126,8 @@ img/logo-dark.png" alt="Anhangá Logo"
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>Samuel</span> <i
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span><?php echo $_smarty_tpl->tpl_vars['nome_usuario']->value;?>
+</span> <i
                                     class="icon-submenu fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
@@ -146,14 +148,15 @@ img/logo-dark.png" alt="Anhangá Logo"
                 <nav>
                     <ul class="nav">
                         <li>
-                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "pedidos") {?>active<?php }?>"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
+                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "
+                                pedidos") {?>active<?php }?>"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_pedidos" class="collapse ">
                                 <ul class="nav">
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=pedidos" class="">Pedidos</a></li>
+index.php?pagina=pedidos">Pedidos</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=historico_pedidos" class="">Histórico de Pedidos</a></li>
+index.php?pagina=historico_pedidos">Histórico de Pedidos</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -161,14 +164,15 @@ index.php?pagina=historico_pedidos" class="">Histórico de Pedidos</a></li>
                         <li><a href="tables.html" class=""><i class="fa fa-list-alt"></i> <span>Cardápio</span></a></li>
 
                         <li>
-                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "produtos") {?>active<?php }?>"> <i class="fa fa-box-open"></i> <span>Produtos</span> 
-                            <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "
+                                produtos") {?>active<?php }?>"> <i class="fa fa-box-open"></i> <span>Produtos</span>
+                                <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=produtos" class="">Novo produto</a></li>
+index.php?pagina=produtos">Novo produto</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=tipo_produto" class="">Tipo</a></li>
+index.php?pagina=tipo_produto">Tipo</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -182,8 +186,8 @@ index.php?pagina=tipo_produto" class="">Tipo</a></li>
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="page-profile.html" class="">Aplicativo</a></li>
-                                    <li><a href="page-login.html" class="">Administrativo</a></li>
+                                    <li><a href="page-profile.html">Aplicativo</a></li>
+                                    <li><a href="page-login.html">Administrativo</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -207,8 +211,8 @@ index.php?pagina=tipo_produto" class="">Tipo</a></li>
         <div class="clearfix"></div>
         <footer>
             <div class="container-fluid">
-                <p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>.
-                    All Rights Reserved.</p>
+                <p class="copyright">&copy; <?php echo $_smarty_tpl->tpl_vars['ano']->value;?>
+ Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
@@ -226,5 +230,6 @@ js/app.js"><?php echo '</script'; ?>
 >
 
 </body>
+
 </html><?php }
 }

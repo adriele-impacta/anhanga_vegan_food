@@ -11,6 +11,8 @@ $smarty->assign("URL", URL);
 $smarty->assign("LOC", LOC);
 $smarty->assign("LIB_DIR", LIB_DIR);
 $smarty->assign("IMG_DIR", IMG_DIR);
+$smarty->assign("nome_usuario", $nome_usuario);
+
 $smarty->assign("ano", date('Y'));
 class Telas extends Smarty
 {

@@ -12,9 +12,9 @@ define('CLASSES_DIR', LOC . 'resources/');
 define('LIB_DIR', URL . 'lib/');
 define('IMG_DIR', URL . 'imagens/');
 
-
 if(isset($_SESSION['id'])){
- echo "tem sessao";
+    $nome_usuario = $_SESSION['nome_logado'];
+    $login_usuario = $_SESSION['login'];
 }
 else{
     echo "nao tem sessao";

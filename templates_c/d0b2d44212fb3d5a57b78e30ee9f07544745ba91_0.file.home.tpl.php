@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-27 23:53:17
+/* Smarty version 3.1.33, created on 2019-04-28 23:47:05
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc4cf4d4ac7b9_45333399',
+  'unifunc' => 'content_5cc61f59044cb0_59457265',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0b2d44212fb3d5a57b78e30ee9f07544745ba91' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\home.tpl',
-      1 => 1556392441,
+      1 => 1556488023,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc4cf4d4ac7b9_45333399 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc61f59044cb0_59457265 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br" class="fullscreen-bg">
 
@@ -31,19 +31,17 @@ function content_5cc4cf4d4ac7b9_45333399 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-vendor/font-awesome/css/font-awesome.min.css">
+vendor/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/font-awesome/css/font-awesome.min.css">-->
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 css/main.css">
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/favicon.png">
+img/icons/logo-cachorro.png">
 </head>
 
 <body>
@@ -56,28 +54,29 @@ img/favicon.png">
                         <div class="content">
                             <div class="header">
                                 <div class="logo text-center"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/logo.jpg" alt="Anhangá Logo" height="78">
+img/logo-sem-fundo.png" alt="Anhangá Logo"
+                                        height="78">
                                 </div>
                                 <p class="lead">Bem vindo!</p>
                             </div>
-                          
-                            <form class="form-auth-small" method="POST" id="frmLogin" action="index.php?pagina=home&send=1">
+
+                            <form class="form-auth-small" method="POST" id="frmLogin"
+                                action="index.php?pagina=home&send=1">
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Usuário</label>
-                                    <input type="text" class="form-control" name="usuario" placeholder="Usuário" required>
+                                    <input type="text" class="form-control" name="usuario" placeholder="Usuário"
+                                        required>
                                 </div>
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Senha</label>
-                                    <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+                                    <input type="password" class="form-control" name="senha" placeholder="Senha"
+                                        required>
                                 </div>
-                                                               <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
-                                <div class="bottom">
-                                    <span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
-                                </div>
-                            </form>
+                                                                <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                                                            </form>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>

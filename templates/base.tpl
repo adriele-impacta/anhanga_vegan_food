@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="{$LIB_DIR}css/bootstrap.css">
+    <link rel="stylesheet" href="{$LIB_DIR}vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+   
     <link rel="stylesheet" href="{$LIB_DIR}vendor/chartist/css/chartist-custom.css">
     <link rel="stylesheet" href="{$LIB_DIR}css/datatables.css" />
 
@@ -23,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
     <link rel="apple-touch-icon" sizes="76x76" href="{$LIB_DIR}img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="{$LIB_DIR}img/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{$LIB_DIR}img/icons/logo-cachorro.png">
 
     <!-- VENDOR SCRIPTS -->
     <script src="{$LIB_DIR}vendor/jquery/jquery.min.js"></script>
@@ -32,7 +33,7 @@
     <script src="{$LIB_DIR}vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
     <script src="{$LIB_DIR}vendor/chartist/js/chartist.min.js"></script>
     <script src="{$LIB_DIR}js/klorofil-common.js"></script>
-   <script src="{$LIB_DIR}js/datatables.js"></script>
+    <script src="{$LIB_DIR}js/datatables.js"></script>
 </head>
 
 
@@ -42,8 +43,8 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                <a href="index.html"><img src="{$LIB_DIR}img/logo-dark.png" alt="Anhangá Logo"
-                        class="img-responsive logo"></a>
+                <a href="index.html"><img src="{$LIB_DIR}img/logo-escrito.png" alt="Anhangá Logo"
+                        class="img-responsive logo-in"></a>
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
@@ -73,7 +74,7 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>Samuel</span> <i
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span>{$nome_usuario}</span> <i
                                     class="icon-submenu fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
@@ -96,12 +97,13 @@
                 <nav>
                     <ul class="nav">
                         <li>
-                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed {if $menu_ativo == "pedidos"}active{/if}"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
+                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed {if $menu_ativo == "
+                                pedidos"}active{/if}"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_pedidos" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=pedidos" class="">Pedidos</a></li>
-                                    <li><a href="{$URL}index.php?pagina=historico_pedidos" class="">Histórico de Pedidos</a></li>
+                                    <li><a href="{$URL}index.php?pagina=pedidos">Pedidos</a></li>
+                                    <li><a href="{$URL}index.php?pagina=historico_pedidos">Histórico de Pedidos</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -109,12 +111,13 @@
                         <li><a href="tables.html" class=""><i class="fa fa-list-alt"></i> <span>Cardápio</span></a></li>
 
                         <li>
-                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed {if $menu_ativo == "produtos"}active{/if}"> <i class="fa fa-box-open"></i> <span>Produtos</span> 
-                            <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed {if $menu_ativo == "
+                                produtos"}active{/if}"> <i class="fa fa-box-open"></i> <span>Produtos</span>
+                                <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=produtos" class="">Novo produto</a></li>
-                                    <li><a href="{$URL}index.php?pagina=tipo_produto" class="">Tipo</a></li>
+                                    <li><a href="{$URL}index.php?pagina=produtos">Novo produto</a></li>
+                                    <li><a href="{$URL}index.php?pagina=tipo_produto">Tipo</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -128,8 +131,8 @@
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="page-profile.html" class="">Aplicativo</a></li>
-                                    <li><a href="page-login.html" class="">Administrativo</a></li>
+                                    <li><a href="page-profile.html">Aplicativo</a></li>
+                                    <li><a href="page-login.html">Administrativo</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -152,8 +155,7 @@
         <div class="clearfix"></div>
         <footer>
             <div class="container-fluid">
-                <p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>.
-                    All Rights Reserved.</p>
+                <p class="copyright">&copy; {$ano} Todos os direitos reservados.</p>
             </div>
         </footer>
     </div>
@@ -165,4 +167,5 @@
     <script src="{$LIB_DIR}js/app.js"></script>
 
 </body>
+
 </html>
