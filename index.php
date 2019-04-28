@@ -1,14 +1,9 @@
 <?php
 require_once './configs/config.php';
-
-$pagina = filter_input(INPUT_GET, 'pagina', FILTER_SANITIZE_STRING);
-$acao = filter_input(INPUT_GET, 'acao', FILTER_SANITIZE_STRING);
-
 require_once CLASSES_DIR . "Telas.class.php";
 
 $tela = new Telas();
-switch ($pagina) {      
-
+switch ($pagina) {  
     case 'produtos':
         if (isset($acao)) {
             require_once CONTROLLER_DIR . "$pagina/$acao.php";
@@ -37,9 +32,6 @@ switch ($pagina) {
         $tela->pedidos();
         break;
 
-    //funcoes
-    case 'mudar_lingua':
-        require_once CONTROLLER_DIR . "$acao.php";
-        exit;
-        break;
+    case 'notsession':
+    header('Location: ' . URL . 'index.php?pagina=home');
 }

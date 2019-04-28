@@ -97,8 +97,7 @@
                 <nav>
                     <ul class="nav">
                         <li>
-                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed {if $menu_ativo == "
-                                pedidos"}active{/if}"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
+                            <a href="#menu_pedidos" data-toggle="collapse" class="collapsed {if $menu_ativo == "pedidos"}active{/if}"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_pedidos" class="collapse ">
                                 <ul class="nav">
@@ -111,8 +110,7 @@
                         <li><a href="tables.html" class=""><i class="fa fa-list-alt"></i> <span>Cardápio</span></a></li>
 
                         <li>
-                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed {if $menu_ativo == "
-                                produtos"}active{/if}"> <i class="fa fa-box-open"></i> <span>Produtos</span>
+                            <a href="#menu_produtos" data-toggle="collapse" class="collapsed {if $menu_ativo == "produtos"}active{/if}"> <i class="fa fa-box-open"></i> <span>Produtos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">

@@ -3349,6 +3349,18 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #333;
 }
 
+.btn-orange {
+  color: #fff;
+  background-color: #fb5a00;
+  border-color: #fb4a00;
+}
+
+.btn-orange:hover {
+  color: #fff;
+  background-color: #fb7a00;
+  border-color: #fb5a00;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #337ab7;
