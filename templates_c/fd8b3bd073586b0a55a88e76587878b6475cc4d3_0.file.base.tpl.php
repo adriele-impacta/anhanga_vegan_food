@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-29 00:46:57
+/* Smarty version 3.1.33, created on 2019-04-29 02:24:05
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc62d61b74da8_71771758',
+  'unifunc' => 'content_5cc644250be001_20279236',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1556491510,
+      1 => 1556497149,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc62d61b74da8_71771758 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cc644250be001_20279236 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -94,7 +94,8 @@ js/datatables.js"><?php echo '</script'; ?>
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                <a href="index.html"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+                <a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=pedidos"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 img/logo-escrito.png" alt="Anhangá Logo"
                         class="img-responsive logo-in"></a>
             </div>

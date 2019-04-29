@@ -43,7 +43,7 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                <a href="index.html"><img src="{$LIB_DIR}img/logo-escrito.png" alt="Anhangá Logo"
+                <a href="{$URL}index.php?pagina=pedidos"><img src="{$LIB_DIR}img/logo-escrito.png" alt="Anhangá Logo"
                         class="img-responsive logo-in"></a>
             </div>
             <div class="container-fluid">
