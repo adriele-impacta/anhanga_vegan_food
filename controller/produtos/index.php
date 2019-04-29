@@ -14,4 +14,11 @@ while ($res = $produtos->retornaDados()) {
      array_push($lista_produtos, get_object_vars($res)); //stdObject para array
     }
 }
+
+$smarty->assign("tipos_values", array('', 1, 2, 3, 4, 5));
+$smarty->assign("tipos_output", array("Dia da semana", "Segunda", "Terça", "Quarta", "Quinta", "Sexta"));
+$smarty->assign("tipo_selected", "");
+
+
+
 $smarty->assign("lista_produtos", $lista_produtos);

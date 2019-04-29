@@ -29,7 +29,7 @@ class Telas extends Smarty
         $smarty->assign("nome_pagina", "Produtos");
         $smarty->assign("menu_ativo", "produtos");
 
-        if (isset($acao)) {
+        if (isset($acao) && $acao !== "cardapio") {
             $smarty->assign("upload_arquivo", "true");
             $smarty->assign("conteudo_pagina", "produtos_form.tpl");
         } else {

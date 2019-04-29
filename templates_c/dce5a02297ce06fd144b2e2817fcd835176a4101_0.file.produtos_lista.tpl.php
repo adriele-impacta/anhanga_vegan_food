@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-28 01:47:32
+/* Smarty version 3.1.33, created on 2019-04-29 01:53:59
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\produtos_lista.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc4ea14e066f3_66422413',
+  'unifunc' => 'content_5cc63d176cb124_86750120',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dce5a02297ce06fd144b2e2817fcd835176a4101' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\produtos_lista.tpl',
-      1 => 1556408528,
+      1 => 1556495635,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc4ea14e066f3_66422413 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="panel">
+function content_5cc63d176cb124_86750120 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
+?>
+<div class="panel">
     <div class="panel-body">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -45,9 +47,10 @@ index.php?pagina=produtos">Home</a></li>
             <thead>
                 <tr>
                     <th class="no-sort">#</th>
-                    <th>Tipo de produto</th>
                     <th>Nome</th>
-                                        <th class="no-sort s10">Ações</th>
+                    <th class="no-sort">Disponibilidade</th>
+                    <th>Tipo de produto</th>
+                    <th class="no-sort s10">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,14 +61,18 @@ $_smarty_tpl->tpl_vars['__smarty_section_sec1'] = new Smarty_Variable(array());
 if ($__section_sec1_0_total !== 0) {
 for ($__section_sec1_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] = 0; $__section_sec1_0_iteration <= $__section_sec1_0_total; $__section_sec1_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']++){
 ?>
+
                 <tr <?php if (isset($_smarty_tpl->tpl_vars['id_atualiza']->value)) {
-if ($_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'] == $_smarty_tpl->tpl_vars['id_atualiza']->value) {?>class='bg-success' <?php }
+if ($_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'] == $_smarty_tpl->tpl_vars['id_atualiza']->value) {?>class='bg-success'<?php }
 }?>>
                     <td><?php echo $_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id_categoria'];?>
-</td>
                     <td><?php echo $_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['nome_produto'];?>
+</td>
+                    <td><select name="cardapio" id="c<?php echo $_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
+" class="form-control input-sm cardapio"><?php echo smarty_function_html_options(array('values'=>$_smarty_tpl->tpl_vars['tipos_values']->value,'selected'=>$_smarty_tpl->tpl_vars['tipo_selected']->value,'output'=>$_smarty_tpl->tpl_vars['tipos_output']->value),$_smarty_tpl);?>
+</select></td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id_categoria'];?>
 </td>
                     <td>
                         <a class="text-primary" id="editar"
