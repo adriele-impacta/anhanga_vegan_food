@@ -136,6 +136,8 @@ abstract class Banco
 
         $sql .= "WHERE " . $objeto->campoPk . " = ";
         $sql .= is_numeric($objeto->valorPk) ? $objeto->valorPk : "'" . $objeto->valorPk . "'";
+
+        
         return $this->executaSQL($sql);
 
     } // rotina de update
@@ -179,6 +181,7 @@ abstract class Banco
         if (!empty($objeto->extrasSelect)) {
             $sql .= " " . $objeto->extrasSelect;
         }
+
         return $this->executaSQL($sql);
     }
 

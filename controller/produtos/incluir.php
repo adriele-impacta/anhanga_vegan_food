@@ -57,8 +57,11 @@ if (isset($send)) {
             $produtos->delCampo('imagem');
         }
 
-        $produtos->delCampo('promocao');
         $produtos->delCampo('id');
+        $produtos->delCampo('promocao');
+        $produtos->delCampo('dia_semana');
+        
+        
 
         $produtos->setValor('id_categoria', $id_categoria);
         $produtos->setValor('nome_produto', $nome_produto);

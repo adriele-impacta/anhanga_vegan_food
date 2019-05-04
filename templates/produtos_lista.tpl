@@ -14,24 +14,28 @@
                 </a>
             </div>
         </div>
+
         <table id="table-{$menu_ativo}" class="table table-striped table-sm">
             <thead>
                 <tr>
                     <th class="no-sort">#</th>
                     <th>Nome</th>
-                    <th class="no-sort">Disponibilidade</th>
+                    <th class="sort_by">Disponibilidade</th>
                     <th>Tipo de produto</th>
                     <th class="no-sort s10">Ações</th>
                 </tr>
             </thead>
             <tbody>
                 {section name=sec1 loop=$lista_produtos}
-
-                <tr {if isset($id_atualiza)}{if $lista_produtos[sec1].id==$id_atualiza}class='bg-success'{/if}{/if}>
+                <tr id="tr{$lista_produtos[sec1].id}" {if isset($id_atualiza)}{if $lista_produtos[sec1].id==$id_atualiza}class='bg-success' {/if}{/if}>
                     <td>{$lista_produtos[sec1].id}</td>
                     <td>{$lista_produtos[sec1].nome_produto}</td>
-                    <td><select name="cardapio" id="c{$lista_produtos[sec1].id}" class="form-control input-sm cardapio">{html_options values=$tipos_values selected=$tipo_selected output=$tipos_output}</select></td>
-                    <td>{$lista_produtos[sec1].id_categoria}</td>
+                    <td><select name="cardapio" data-cod="{$lista_produtos[sec1].id}" id="produto{$lista_produtos[sec1].id}" class="form-control input-sm cardapio">{html_options
+                            values=$tipos_values selected=$lista_produtos[sec1].dia_semana
+                            output=$tipos_output}</select>
+                        <small id="retorno{$lista_produtos[sec1].id}"></small>
+                    </td>
+                    <td>{$lista_produtos[sec1].nome_categoria}</td>
                     <td>
                         <a class="text-primary" id="editar"
                             href="index.php?pagina=produtos&acao=alterar&id={$lista_produtos[sec1].id}">

@@ -1,5 +1,5 @@
 <?php
-require_once 'Base.class.php';
+
 class Adm extends Base
 {
     public function __construct($campos = array())

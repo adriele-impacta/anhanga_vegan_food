@@ -1,5 +1,5 @@
 <?php
-require_once('Base.class.php');
+
 
 class Produtos extends Base{
 
@@ -15,6 +15,7 @@ class Produtos extends Base{
                 "nome_produto" => null,
                 "descricao_produto" => null,
                 "valor" => null,
+                "dia_semana" => null,
                 "promocao" => null,
                 "imagem" => null,
                 "dt_criacao" => null,
@@ -36,6 +37,7 @@ class Produtos extends Base{
                 $this->delCampo('nome_produto');
                 $this->delCampo('descricao_produto');
                 $this->delCampo('valor');
+                $this->delCampo('dia_semana');
                 $this->delCampo('promocao');
                 $this->delCampo('imagem');
                 $this->delCampo('dt_criacao');

@@ -73,6 +73,7 @@ if (isset($_GET['send'])) {
 
 
         $produtos->delCampo('id');
+        $produtos->delCampo('dia_semana');
         $produtos->delCampo('promocao');
         $produtos->delCampo('dt_criacao');
         $produtos->delCampo('criado_por');
