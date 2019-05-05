@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Senha</label>
                                     <input type="password" class="form-control" name="senha" placeholder="Senha" required>
-                                    <div class="invalid-feedback">{$feedback}</div>
+                                    <div class="invalid-feedback">{if isset($feedback)}{$feedback}{/if}</div>
                                 </div>
                                 {* <div class="form-group clearfix">
                                     <label class="fancy-checkbox element-left">

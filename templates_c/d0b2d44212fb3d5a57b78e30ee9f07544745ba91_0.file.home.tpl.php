@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-05 21:51:55
+/* Smarty version 3.1.33, created on 2019-05-06 01:36:59
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ccf3edb7c0831_79548539',
+  'unifunc' => 'content_5ccf739b18c365_43172126',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0b2d44212fb3d5a57b78e30ee9f07544745ba91' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\home.tpl',
-      1 => 1557085912,
+      1 => 1557099417,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ccf3edb7c0831_79548539 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ccf739b18c365_43172126 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br" class="fullscreen-bg">
 
@@ -71,8 +71,9 @@ img/logo.gif" alt="Anhangá Logo"
                                 <div class="form-group">
                                     <label for="signin-password" class="control-label sr-only">Senha</label>
                                     <input type="password" class="form-control" name="senha" placeholder="Senha" required>
-                                    <div class="invalid-feedback"><?php echo $_smarty_tpl->tpl_vars['feedback']->value;?>
-</div>
+                                    <div class="invalid-feedback"><?php if (isset($_smarty_tpl->tpl_vars['feedback']->value)) {
+echo $_smarty_tpl->tpl_vars['feedback']->value;
+}?></div>
                                 </div>
                                                                 <button type="submit" class="btn btn-orange btn-lg btn-block">Entrar</button>
                                                                 <input type="hidden" value="enviado" name="enviado">
