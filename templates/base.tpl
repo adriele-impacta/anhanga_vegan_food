@@ -6,34 +6,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!-- VENDOR CSS -->
+ 
     <link rel="stylesheet" href="{$LIB_DIR}vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{$LIB_DIR}vendor/chartist/css/chartist-custom.css">
-    <link rel="stylesheet" href="{$LIB_DIR}css/datatables.css" />
+    <link rel="stylesheet" href="{$LIB_DIR}vendor/datatable/css/datatables.css" />
 
-
-    <!-- MAIN CSS -->
     {if isset($upload_arquivo)}
     <link rel="stylesheet" href="{$LIB_DIR}css/jquery.fileupload.css">
     {/if}
     <link rel="stylesheet" href="{$LIB_DIR}css/main.css">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <!-- ICONS -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">-->
+    
     <link rel="apple-touch-icon" sizes="76x76" href="{$LIB_DIR}img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="{$LIB_DIR}img/icons/logo-cachorro.png">
-
-    <!-- VENDOR SCRIPTS -->
+    
     <script src="{$LIB_DIR}vendor/jquery/jquery.min.js"></script>
     <script src="{$LIB_DIR}vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="{$LIB_DIR}vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script src="{$LIB_DIR}vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
     <script src="{$LIB_DIR}vendor/chartist/js/chartist.min.js"></script>
     <script src="{$LIB_DIR}js/klorofil-common.js"></script>
-    <script src="{$LIB_DIR}js/datatables.js"></script>
+    <script src="{$LIB_DIR}vendor/datatable/js/datatables.js"></script>
 </head>
 
 
@@ -43,13 +37,11 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                <a href="{$URL}index.php?pagina=pedidos"><img src="{$LIB_DIR}img/logo-escrito.png" alt="Anhangá Logo"
-                        class="img-responsive logo-in"></a>
+                <a href="{$URL}index.php?pagina=pedidos"><img src="{$LIB_DIR}img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-fullwidth"><i
-                            class="far fa-arrow-alt-circle-left"></i></button>
+                    <button type="button" class="btn-toggle-fullwidth"><i class="far fa-arrow-alt-circle-left"></i></button>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
@@ -106,9 +98,6 @@
                                 </ul>
                             </div>
                         </li>
-
-                        <li><a href="tables.html" class=""><i class="fa fa-list-alt"></i> <span>Cardápio</span></a></li>
-
                         <li>
                             <a href="#menu_produtos" data-toggle="collapse" class="collapsed {if $menu_ativo == "produtos"}active{/if}"> <i class="fa fa-box-open"></i> <span>Produtos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
@@ -163,6 +152,7 @@
     <script src="{$LIB_DIR}js/upload_arquivo.js"></script>
     {/if}
     <script src="{$LIB_DIR}js/app.js"></script>
+    <script src="{$LIB_DIR}js/valida_form.js"></script>
 
 </body>
 

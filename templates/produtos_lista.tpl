@@ -27,13 +27,13 @@
             </thead>
             <tbody>
                 {section name=sec1 loop=$lista_produtos}
-                <tr id="tr{$lista_produtos[sec1].id}" {if isset($id_atualiza)}{if $lista_produtos[sec1].id==$id_atualiza}class='bg-success' {/if}{/if}>
+                <tr id="tr{$lista_produtos[sec1].id}" class="tr_bg {if isset($id_atualiza)}{if $lista_produtos[sec1].id==$id_atualiza}= bg-success {/if}{/if}">
                     <td>{$lista_produtos[sec1].id}</td>
                     <td>{$lista_produtos[sec1].nome_produto}</td>
                     <td><select name="cardapio" data-cod="{$lista_produtos[sec1].id}" id="produto{$lista_produtos[sec1].id}" class="form-control input-sm cardapio">{html_options
                             values=$tipos_values selected=$lista_produtos[sec1].dia_semana
                             output=$tipos_output}</select>
-                        <small id="retorno{$lista_produtos[sec1].id}"></small>
+                        <small class="retorno" id="retorno{$lista_produtos[sec1].id}"></small>
                     </td>
                     <td>{$lista_produtos[sec1].nome_categoria}</td>
                     <td>

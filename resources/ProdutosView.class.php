@@ -13,7 +13,8 @@ class ProdutosView extends Base{
                 "id" => null,
                 "nome_produto" => null,
                 "nome_categoria" => null,
-                "dia_semana" => null            
+                "dia_semana" => null,
+                "dt_delete" => null            
             );
         }
         else{

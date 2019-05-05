@@ -28,10 +28,11 @@ class Login extends Base
 
             $this->extrasSelect = "WHERE login ='$usuario' AND senha = '$senha';";
             $this->selecionaCampos($this);
-
-            $res = $this->retornaDados();
-            $this->id_adm = $res->id_adm;
-            $this->login = $res->login;
+            if ($this->linhasAfetadas == 1) {
+                $res = $this->retornaDados();
+                $this->id_adm = $res->id_adm;
+                $this->login = $res->login;
+            }
         }
     }
 }

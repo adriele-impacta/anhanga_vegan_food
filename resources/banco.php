@@ -182,7 +182,6 @@ abstract class Banco
         if (!empty($objeto->extrasSelect)) {
             $sql .= " " . $objeto->extrasSelect;
         }
-
         return $this->executaSQL($sql);
     }
 

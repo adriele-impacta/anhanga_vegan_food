@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-29 02:24:05
+/* Smarty version 3.1.33, created on 2019-05-05 21:54:53
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc644250be001_20279236',
+  'unifunc' => 'content_5ccf3f8de42fe4_78504759',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1556497149,
+      1 => 1557086089,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc644250be001_20279236 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ccf3f8de42fe4_78504759 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,34 +29,28 @@ function content_5cc644250be001_20279236 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!-- VENDOR CSS -->
+ 
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/chartist/css/chartist-custom.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-css/datatables.css" />
+vendor/datatable/css/datatables.css" />
 
-
-    <!-- MAIN CSS -->
     <?php if (isset($_smarty_tpl->tpl_vars['upload_arquivo']->value)) {?>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 css/jquery.fileupload.css">
     <?php }?>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 css/main.css">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <!-- ICONS -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">-->
+    
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 img/icons/logo-cachorro.png">
-
-    <!-- VENDOR SCRIPTS -->
+    
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/jquery/jquery.min.js"><?php echo '</script'; ?>
@@ -83,7 +77,7 @@ js/klorofil-common.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-js/datatables.js"><?php echo '</script'; ?>
+vendor/datatable/js/datatables.js"><?php echo '</script'; ?>
 >
 </head>
 
@@ -96,13 +90,11 @@ js/datatables.js"><?php echo '</script'; ?>
             <div class="brand">
                 <a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=pedidos"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/logo-escrito.png" alt="Anhangá Logo"
-                        class="img-responsive logo-in"></a>
+img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-fullwidth"><i
-                            class="far fa-arrow-alt-circle-left"></i></button>
+                    <button type="button" class="btn-toggle-fullwidth"><i class="far fa-arrow-alt-circle-left"></i></button>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
@@ -160,9 +152,6 @@ index.php?pagina=historico_pedidos">Histórico de Pedidos</a></li>
                                 </ul>
                             </div>
                         </li>
-
-                        <li><a href="tables.html" class=""><i class="fa fa-list-alt"></i> <span>Cardápio</span></a></li>
-
                         <li>
                             <a href="#menu_produtos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "produtos") {?>active<?php }?>"> <i class="fa fa-box-open"></i> <span>Produtos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
@@ -226,6 +215,10 @@ js/upload_arquivo.js"><?php echo '</script'; ?>
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 js/app.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+js/valida_form.js"><?php echo '</script'; ?>
 >
 
 </body>

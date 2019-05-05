@@ -12,9 +12,8 @@ $lista_produtos = array();
 $produtos->extrasSelect = 'ORDER BY -dia_semana DESC;';
 $produtos->selecionaCampos($produtos);
 while ($res = $produtos->retornaDados()) {
-    //if ($res->dt_delete == '0000-00-00 00:00:00') 
-    {
-       
+    if ($res->dt_delete == '0000-00-00 00:00:00') 
+    {    
      array_push($lista_produtos, get_object_vars($res)); //stdObject para array
     }
 }

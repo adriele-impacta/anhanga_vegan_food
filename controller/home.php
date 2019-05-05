@@ -2,13 +2,15 @@
 require_once CLASSES_DIR . 'Login.class.php';
 require_once CLASSES_DIR . 'Adm.class.php';
 
+$enviado = filter_input(INPUT_POST, 'enviado', FILTER_SANITIZE_SPECIAL_CHARS);
 $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
 $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
 
-if (isset($_GET['send'])) {
+if (!empty($enviado)) {
     $login = new Login();
     $login->login($usuario, $senha);
-    if ($login->linhasAfetadas == 1) {
+    if ($login->linhasAfetadas == 1)
+     {
 
         $dados_session = new Adm();
         $dados_session->logado($login->id_adm);
@@ -19,6 +21,7 @@ if (isset($_GET['send'])) {
         
         header('Location: ' . URL . 'index.php?pagina=pedidos');
     } else {
+        $smarty->assign("feedback", "Usuário e/ou senha inválido.");
         $smarty->assign("class_erro", "is-invalid");
     }
 }
