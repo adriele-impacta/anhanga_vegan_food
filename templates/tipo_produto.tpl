@@ -26,13 +26,12 @@
                 {section name=sec1 loop=$lista_tipos}
                 <tr>
                     <td>{$lista_tipos[sec1].id}</td>
-                    <td contenteditable="true" data-cod="{$lista_tipos[sec1].id}">{$lista_tipos[sec1].nome_categoria}
-                    </td>
-                    <td>
-                        <a class="text-primary" id="editar-row" data-page="{$nome_pagina}" data-cod="1" data-action="update-row" href="javascript:">
+                    <td contenteditable="true" id="tipo_produto{$lista_tipos[sec1].id}" data-cod="{$lista_tipos[sec1].id}">{$lista_tipos[sec1].nome_categoria}</td>
+                    <td class="acoes_tipo_produto">
+                        <a class="text-primary editar-row" id="editar-row{$lista_tipos[sec1].id}" data-cod="{$lista_tipos[sec1].id}" href="javascript:">
                             <i class="far fa-edit"></i>
                         </a>
-                        <a class="text-danger" href="index.php?pagina=tipo_produto&acao=excluir&id={$lista_produtos[sec1].id}">
+                        <a class="text-danger" href="index.php?pagina=tipo_produto&acao=excluir&id={$lista_tipos[sec1].id}">
                             <i class="far fa-trash-alt"></i>
                         </a>
                     </td>

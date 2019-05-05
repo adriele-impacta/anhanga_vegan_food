@@ -1,25 +1,26 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Mensagem de Cris Telis</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Olá, estou chegando na estação.
-        <div class="form-group">
-            <hr>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mensagem de Cris Telis</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Olá, estou chegando na estação.
+                <div class="form-group">
+                    <hr>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
+                <button type="button" class="btn btn-primary"><span data-feather="send"></span> Enviar</button>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
-        <button type="button" class="btn btn-primary"><span data-feather="send"></span> Enviar</button>
-      </div>
     </div>
-  </div>
 </div>
 <main role="main" class="col-md-11 ml-sm-auto mr-sm-auto col-lg-11 px-4">
     <div class="row">
@@ -49,8 +50,8 @@
         </div>
     </div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="hoje-tab" data-toggle="tab" href="#hoje" role="tab" aria-controls="hoje"
+        <li class="nav-item active">
+            <a class="nav-link" id="hoje-tab" data-toggle="tab" href="#hoje" role="tab" aria-controls="hoje"
                 aria-selected="true">Hoje</a>
         </li>
         <li class="nav-item">
@@ -63,7 +64,7 @@
         </li>
     </ul>
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
-        <div class="tab-pane fade show active" id="hoje" role="tabpanel" aria-labelledby="hoje-tab">
+        <div class="tab-pane fade show active in" id="hoje" role="tabpanel" aria-labelledby="hoje-tab">
             <table id="table-{$nome_pagina}" class="table table-striped table-sm clean-table">
                 <thead>
                     <tr class="border-top-remove">
@@ -101,10 +102,21 @@
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22" data-feather="message-square"></i>
-                           </a>                          
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                <i style="
+                                        font-size: 19px;
+                                        margin-right: 0px;
+                                        margin-top: 5px;
+                                        vertical-align: middle;
+                                        " class="fa fa-comment-alt"></i>
+                                <span class="badge bg-danger" style="
+        position: absolute;
+        /* top: 8px; */
+        right: 7px;
+        /* bottom: 132px; */
+    ">5</span>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -117,7 +129,7 @@
                         <td>R$ 15,00</td>
                         <td>
                             <div class="form-group mb-0">
-                            <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
                                     <option>Recebido</option>
                                     <option selected>Saiu para entrega</option>
                                     <option>Chegou no local de entrega</option>
@@ -125,12 +137,22 @@
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22 mt-1" data-feather="message-square"></i>
-                           </a>
-                           <span class="badge badge-danger new-message">2</span>
-                        </td>
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="
+                                            font-size: 19px;
+                                            margin-right: 0px;
+                                            margin-top: 5px;
+                                            vertical-align: middle;
+                                            " class="fa fa-comment-alt"></i>
+                                    <span class="badge bg-danger" style="
+            position: absolute;
+            /* top: 8px; */
+            right: 7px;
+            /* bottom: 132px; */
+        ">5</span>
+                                </a>
+                            </td>
                     </tr>
                     <tr class="novo-pedido">
                         <td>0003</td>
@@ -142,20 +164,31 @@
                         <td>R$ 28,00</td>
                         <td>
                             <div class="form-group mb-0">
-                            <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
-                            <option selected>Novo</option>
-                            <option>Recebido</option>
+                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                    <option selected>Novo</option>
+                                    <option>Recebido</option>
                                     <option>Saiu para entrega</option>
-                                    <option >Chegou no local de entrega</option>
+                                    <option>Chegou no local de entrega</option>
                                     <option>Cancelado</option>
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22" data-feather="message-square"></i>
-                           </a>
-                        </td>
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="
+                                            font-size: 19px;
+                                            margin-right: 0px;
+                                            margin-top: 5px;
+                                            vertical-align: middle;
+                                            " class="fa fa-comment-alt"></i>
+                                    <span class="badge bg-danger" style="
+            position: absolute;
+            /* top: 8px; */
+            right: 7px;
+            /* bottom: 132px; */
+        ">5</span>
+                                </a>
+                            </td>
                     </tr>
                     <tr>
                         <td>0004</td>
@@ -167,7 +200,7 @@
                         <td>R$ 28,00</td>
                         <td>
                             <div class="form-group mb-0">
-                            <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
 
                                     <option selected>Recebido</option>
                                     <option>Saiu para entrega</option>
@@ -176,16 +209,26 @@
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22" data-feather="message-square"></i>
-                           </a>
-                           <span class="badge badge-danger new-message">1</span>
-                        </td>
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="
+                                            font-size: 19px;
+                                            margin-right: 0px;
+                                            margin-top: 5px;
+                                            vertical-align: middle;
+                                            " class="fa fa-comment-alt"></i>
+                                    <span class="badge bg-danger" style="
+            position: absolute;
+            /* top: 8px; */
+            right: 7px;
+            /* bottom: 132px; */
+        ">5</span>
+                                </a>
+                            </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="tab-pane fade" id="amanha" role="tabpanel" aria-labelledby="amanha-tab">...</div>
     </div>
-    </main>
+</main>

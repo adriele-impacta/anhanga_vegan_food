@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-05 21:07:27
+/* Smarty version 3.1.33, created on 2019-05-06 00:54:58
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\produtos_lista.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ccf346f33ee39_64725327',
+  'unifunc' => 'content_5ccf69c2409396_77114839',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dce5a02297ce06fd144b2e2817fcd835176a4101' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\produtos_lista.tpl',
-      1 => 1557083226,
+      1 => 1557096894,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ccf346f33ee39_64725327 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ccf69c2409396_77114839 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <div class="panel">
@@ -28,7 +28,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_v
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'URL_DIR');?>
-index.php?pagina=produtos">Home</a></li>
+index.php?pagina=pedidos">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 </li>
             </ol>

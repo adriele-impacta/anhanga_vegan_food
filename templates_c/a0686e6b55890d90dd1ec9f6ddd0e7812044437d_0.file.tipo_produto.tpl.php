@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-28 01:46:06
+/* Smarty version 3.1.33, created on 2019-05-05 23:10:23
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\tipo_produto.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc4e9be640356_25797698',
+  'unifunc' => 'content_5ccf513fd56f95_42842228',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a0686e6b55890d90dd1ec9f6ddd0e7812044437d' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\tipo_produto.tpl',
-      1 => 1556408760,
+      1 => 1557090601,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc4e9be640356_25797698 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ccf513fd56f95_42842228 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel-body">
         <nav aria-label="breadcrumb">
@@ -60,16 +60,17 @@ for ($__section_sec1_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_s
                 <tr>
                     <td><?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
 </td>
-                    <td contenteditable="true" data-cod="<?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
+                    <td contenteditable="true" id="tipo_produto<?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
+" data-cod="<?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['nome_categoria'];?>
-
-                    </td>
-                    <td>
-                        <a class="text-primary" id="editar-row" data-page="<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
-" data-cod="1" data-action="update-row" href="javascript:">
+</td>
+                    <td class="acoes_tipo_produto">
+                        <a class="text-primary editar-row" id="editar-row<?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
+" data-cod="<?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
+" href="javascript:">
                             <i class="far fa-edit"></i>
                         </a>
-                        <a class="text-danger" href="index.php?pagina=tipo_produto&acao=excluir&id=<?php echo $_smarty_tpl->tpl_vars['lista_produtos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
+                        <a class="text-danger" href="index.php?pagina=tipo_produto&acao=excluir&id=<?php echo $_smarty_tpl->tpl_vars['lista_tipos']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['id'];?>
 ">
                             <i class="far fa-trash-alt"></i>
                         </a>

@@ -14,6 +14,24 @@ switch ($pagina) {
         $tela->produtos($acao);
         break;
 
+    case 'tipo_pagamento':
+        if (isset($acao)) {
+            require_once CONTROLLER_DIR . "$pagina/$acao.php";
+        } else {
+            require_once CONTROLLER_DIR . "$pagina/index.php";
+        }
+        $tela->tipo_pagamento($acao);
+        break;  
+        
+    case 'status_pedido':
+        if (isset($acao)) {
+            require_once CONTROLLER_DIR . "$pagina/$acao.php";
+        } else {
+            require_once CONTROLLER_DIR . "$pagina/index.php";
+        }
+        $tela->status_pedido($acao);
+        break; 
+
     case 'tipo_produto':
         if (isset($acao)) {
             require_once CONTROLLER_DIR . "$pagina/$acao.php";
@@ -32,7 +50,6 @@ switch ($pagina) {
         require_once CONTROLLER_DIR . "$pagina/index.php";
         $tela->pedidos();
         break;
-
     case 'notsession':
     header('Location: ' . URL . 'index.php?pagina=home');
 }

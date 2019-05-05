@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-05 21:54:53
+/* Smarty version 3.1.33, created on 2019-05-06 00:06:22
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ccf3f8de42fe4_78504759',
+  'unifunc' => 'content_5ccf5e5e342fc5_42951549',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1557086089,
+      1 => 1557093734,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ccf3f8de42fe4_78504759 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ccf5e5e342fc5_42951549 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -119,17 +119,14 @@ img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
                         </li>
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span><?php echo $_smarty_tpl->tpl_vars['nome_usuario']->value;?>
-</span> <i
-                                    class="icon-submenu fa fa-angle-down"></i></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_smarty_tpl->tpl_vars['nome_usuario']->value;?>
+ <i class="icon-submenu fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
                                                                 <li><a href="#"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
                             </ul>
                         </li>
-                        <!-- <li>
-							<a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-						</li> -->
+                    
                     </ul>
                 </div>
             </div>
@@ -143,12 +140,16 @@ img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
                         <li>
                             <a href="#menu_pedidos" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "pedidos") {?>active<?php }?>"> <i class="fa fa-shopping-cart"></i> <span>Pedidos</span>
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-                            <div id="menu_pedidos" class="collapse ">
+                            <div id="menu_pedidos" class="collapse">
                                 <ul class="nav">
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=pedidos">Pedidos</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=historico_pedidos">Histórico de Pedidos</a></li>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=tipo_pagamento">Tipo de pagamento</a></li>
+                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=status_pedido">Status do pedido</a></li>
                                 </ul>
                             </div>
                         </li>

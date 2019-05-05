@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-27 21:35:50
+/* Smarty version 3.1.33, created on 2019-05-05 23:59:39
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cc4af16b22e68_26704766',
+  'unifunc' => 'content_5ccf5ccbcbd095_07459921',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1556392441,
+      1 => 1557093576,
       2 => 'file',
     ),
   ),
@@ -20,29 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Mensagem de Cris Telis</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Olá, estou chegando na estação.
-        <div class="form-group">
-            <hr>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mensagem de Cris Telis</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Olá, estou chegando na estação.
+                <div class="form-group">
+                    <hr>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
+                <button type="button" class="btn btn-primary"><span data-feather="send"></span> Enviar</button>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
-        <button type="button" class="btn btn-primary"><span data-feather="send"></span> Enviar</button>
-      </div>
     </div>
-  </div>
 </div>
 <main role="main" class="col-md-11 ml-sm-auto mr-sm-auto col-lg-11 px-4">
     <div class="row">
@@ -72,8 +73,8 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="hoje-tab" data-toggle="tab" href="#hoje" role="tab" aria-controls="hoje"
+        <li class="nav-item active">
+            <a class="nav-link" id="hoje-tab" data-toggle="tab" href="#hoje" role="tab" aria-controls="hoje"
                 aria-selected="true">Hoje</a>
         </li>
         <li class="nav-item">
@@ -86,7 +87,7 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
         </li>
     </ul>
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
-        <div class="tab-pane fade show active" id="hoje" role="tabpanel" aria-labelledby="hoje-tab">
+        <div class="tab-pane fade show active in" id="hoje" role="tabpanel" aria-labelledby="hoje-tab">
             <table id="table-<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 " class="table table-striped table-sm clean-table">
                 <thead>
@@ -125,10 +126,21 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22" data-feather="message-square"></i>
-                           </a>                          
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                <i style="
+                                        font-size: 19px;
+                                        margin-right: 0px;
+                                        margin-top: 5px;
+                                        vertical-align: middle;
+                                        " class="fa fa-comment-alt"></i>
+                                <span class="badge bg-danger" style="
+        position: absolute;
+        /* top: 8px; */
+        right: 7px;
+        /* bottom: 132px; */
+    ">5</span>
+                            </a>
                         </td>
                     </tr>
                     <tr>
@@ -141,7 +153,7 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
                         <td>R$ 15,00</td>
                         <td>
                             <div class="form-group mb-0">
-                            <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
                                     <option>Recebido</option>
                                     <option selected>Saiu para entrega</option>
                                     <option>Chegou no local de entrega</option>
@@ -149,12 +161,22 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22 mt-1" data-feather="message-square"></i>
-                           </a>
-                           <span class="badge badge-danger new-message">2</span>
-                        </td>
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="
+                                            font-size: 19px;
+                                            margin-right: 0px;
+                                            margin-top: 5px;
+                                            vertical-align: middle;
+                                            " class="fa fa-comment-alt"></i>
+                                    <span class="badge bg-danger" style="
+            position: absolute;
+            /* top: 8px; */
+            right: 7px;
+            /* bottom: 132px; */
+        ">5</span>
+                                </a>
+                            </td>
                     </tr>
                     <tr class="novo-pedido">
                         <td>0003</td>
@@ -166,20 +188,31 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
                         <td>R$ 28,00</td>
                         <td>
                             <div class="form-group mb-0">
-                            <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
-                            <option selected>Novo</option>
-                            <option>Recebido</option>
+                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                    <option selected>Novo</option>
+                                    <option>Recebido</option>
                                     <option>Saiu para entrega</option>
-                                    <option >Chegou no local de entrega</option>
+                                    <option>Chegou no local de entrega</option>
                                     <option>Cancelado</option>
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22" data-feather="message-square"></i>
-                           </a>
-                        </td>
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="
+                                            font-size: 19px;
+                                            margin-right: 0px;
+                                            margin-top: 5px;
+                                            vertical-align: middle;
+                                            " class="fa fa-comment-alt"></i>
+                                    <span class="badge bg-danger" style="
+            position: absolute;
+            /* top: 8px; */
+            right: 7px;
+            /* bottom: 132px; */
+        ">5</span>
+                                </a>
+                            </td>
                     </tr>
                     <tr>
                         <td>0004</td>
@@ -191,7 +224,7 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
                         <td>R$ 28,00</td>
                         <td>
                             <div class="form-group mb-0">
-                            <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
 
                                     <option selected>Recebido</option>
                                     <option>Saiu para entrega</option>
@@ -200,17 +233,27 @@ function content_5cc4af16b22e68_26704766 (Smarty_Internal_Template $_smarty_tpl)
                                 </select>
                             </div>
                         </td>
-                        <td class="text-center">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" >
-                                <i class="feather-22" data-feather="message-square"></i>
-                           </a>
-                           <span class="badge badge-danger new-message">1</span>
-                        </td>
+                        <td class="text-center" style="padding: 1.8% 0%;">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="
+                                            font-size: 19px;
+                                            margin-right: 0px;
+                                            margin-top: 5px;
+                                            vertical-align: middle;
+                                            " class="fa fa-comment-alt"></i>
+                                    <span class="badge bg-danger" style="
+            position: absolute;
+            /* top: 8px; */
+            right: 7px;
+            /* bottom: 132px; */
+        ">5</span>
+                                </a>
+                            </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="tab-pane fade" id="amanha" role="tabpanel" aria-labelledby="amanha-tab">...</div>
     </div>
-    </main><?php }
+</main><?php }
 }

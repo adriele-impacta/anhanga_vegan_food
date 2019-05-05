@@ -2,7 +2,7 @@
     <div class="panel-body">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{#URL_DIR#}index.php?pagina=produtos">Home</a></li>
+                <li class="breadcrumb-item"><a href="{#URL_DIR#}index.php?pagina=pedidos">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{$nome_pagina}</li>
             </ol>
         </nav>
