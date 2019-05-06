@@ -1,6 +1,5 @@
 <?php
 require_once 'banco.php';
-
 abstract class Base extends Banco
 {
     public $tabela = '';

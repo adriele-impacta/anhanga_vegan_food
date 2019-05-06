@@ -50,6 +50,7 @@ switch ($pagina) {
         require_once CONTROLLER_DIR . "$pagina/index.php";
         $tela->pedidos();
         break;
+        
     case 'notsession':
     header('Location: ' . URL . 'index.php?pagina=home');
 }

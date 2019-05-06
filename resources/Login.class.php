@@ -1,5 +1,4 @@
 <?php
-
 class Login extends Base
 {
     public function __construct($campos = array())
