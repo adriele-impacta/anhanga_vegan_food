@@ -117,8 +117,8 @@
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="page-profile.html">Aplicativo</a></li>
-                                    <li><a href="page-login.html">Administrativo</a></li>
+                                    <li><a href="{$URL}index.php?pagina=usr_app">Aplicativo</a></li>
+                                    <li><a href="{$URL}index.php?pagina=usr_adm">Administrativo</a></li>
                                 </ul>
                             </div>
                         </li>

@@ -50,6 +50,15 @@ switch ($pagina) {
         require_once CONTROLLER_DIR . "$pagina/index.php";
         $tela->pedidos();
         break;
+
+    case 'usr_app':
+        if (isset($acao)) {
+            require_once CONTROLLER_DIR . "$pagina/$acao.php";
+        } else {
+            require_once CONTROLLER_DIR . "$pagina/index.php";
+        }
+        $tela->tipo_pagamento($acao);
+        break;  
         
     case 'notsession':
     header('Location: ' . URL . 'index.php?pagina=home');
