@@ -5,7 +5,7 @@ $produtos = new StatusPedido();
 $lista_status_pedido = array();
 $produtos->selecionaCampos($produtos);
 while ($res = $produtos->retornaDados()) {
-    //if ($res->dt_delete == '0000-00-00 00:00:00') 
+    if ($res->dt_delete == '0000-00-00 00:00:00' || $res->dt_delete == '') 
     {    
      array_push($lista_status_pedido, get_object_vars($res)); //stdObject para array
     }

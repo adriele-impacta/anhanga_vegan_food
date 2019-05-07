@@ -8,11 +8,11 @@ class StatusPedido extends Base{
         if(sizeof($campos) <= 0){
             $this->camposValores = array(
                 "id" => null,
-                "nome_status" => null
-                //"dt_criacao" => null,
-               // "criado_por" => null,
-               // "dt_delete" => null,
-               // "deletado_por" => null                 
+                "nome_status" => null,
+                "dt_criacao" => null,
+                "criado_por" => null,
+                "dt_delete" => null, 
+                "deletado_por" => null                 
             );
         }
         else{
