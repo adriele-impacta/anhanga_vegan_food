@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-05 23:59:39
+/* Smarty version 3.1.33, created on 2019-05-07 04:38:54
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ccf5ccbcbd095_07459921',
+  'unifunc' => 'content_5cd0efbe0275a3_54869397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1557093576,
+      1 => 1557196730,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -45,29 +45,39 @@ function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
 </div>
-<main role="main" class="col-md-11 ml-sm-auto mr-sm-auto col-lg-11 px-4">
-    <div class="row">
-        <div class="col-sm-auto">
-            <div class="card h-75 text-center">
-                <div class="card-body" style="padding: 0.5rem;">
-                    <h6 class="card-title">Vendidos hoje: R$ 120,00</h6>
-                    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+
+<div class="panel panel-headline">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pedidos</h3>
+        <p class="panel-subtitle">Listagem de pedidos de hoje e dos próximos dias</p>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="metric">
+                    <span class="icon"><i class="fa fa-shopping-bag"></i></span>
+                    <p>
+                        <span class="number">8</span>
+                        <span class="title">Recebidos</span>
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-auto">
-            <div class="card h-75 text-center">
-                <div class="card-body" style="padding: 0.5rem;">
-                    <h6 class="card-title">Pedidos de hoje: 5</h6>
-                    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+            <div class="col-md-4">
+                <div class="metric">
+                    <span class="icon"><i class="fa fa-hourglass-start"></i></span>
+                    <p>
+                        <span class="number">3</span>
+                        <span class="title">Pendentes</span>
+                    </p>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-auto">
-            <div class="card h-75 text-center">
-                <div class="card-body" style="padding: 0.5rem;">
-                    <h6 class="card-title">Entrega pendente: 2</h6>
-                    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+            <div class="col-md-4">
+                <div class="metric">
+                    <span class="icon"><i class="fa fa-coins"></i></span>
+                    <p>
+                        <span class="number">R$ 185,00</span>
+                        <span class="title">Total vendido</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -134,12 +144,7 @@ function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl)
                                         margin-top: 5px;
                                         vertical-align: middle;
                                         " class="fa fa-comment-alt"></i>
-                                <span class="badge bg-danger" style="
-        position: absolute;
-        /* top: 8px; */
-        right: 7px;
-        /* bottom: 132px; */
-    ">5</span>
+                                <span class="badge bg-danger tem-msg">5</span>
                             </a>
                         </td>
                     </tr>
@@ -162,21 +167,16 @@ function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl)
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
-                                <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                    <i style="
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                <i style="
                                             font-size: 19px;
                                             margin-right: 0px;
                                             margin-top: 5px;
                                             vertical-align: middle;
                                             " class="fa fa-comment-alt"></i>
-                                    <span class="badge bg-danger" style="
-            position: absolute;
-            /* top: 8px; */
-            right: 7px;
-            /* bottom: 132px; */
-        ">5</span>
-                                </a>
-                            </td>
+                                <span class="badge bg-danger tem-msg">5</span>
+                            </a>
+                        </td>
                     </tr>
                     <tr class="novo-pedido">
                         <td>0003</td>
@@ -198,21 +198,16 @@ function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl)
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
-                                <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                    <i style="
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                <i style="
                                             font-size: 19px;
                                             margin-right: 0px;
                                             margin-top: 5px;
                                             vertical-align: middle;
                                             " class="fa fa-comment-alt"></i>
-                                    <span class="badge bg-danger" style="
-            position: absolute;
-            /* top: 8px; */
-            right: 7px;
-            /* bottom: 132px; */
-        ">5</span>
-                                </a>
-                            </td>
+
+                            </a>
+                        </td>
                     </tr>
                     <tr>
                         <td>0004</td>
@@ -234,26 +229,21 @@ function content_5ccf5ccbcbd095_07459921 (Smarty_Internal_Template $_smarty_tpl)
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
-                                <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                    <i style="
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                                <i style="
                                             font-size: 19px;
                                             margin-right: 0px;
                                             margin-top: 5px;
                                             vertical-align: middle;
                                             " class="fa fa-comment-alt"></i>
-                                    <span class="badge bg-danger" style="
-            position: absolute;
-            /* top: 8px; */
-            right: 7px;
-            /* bottom: 132px; */
-        ">5</span>
-                                </a>
-                            </td>
+                                <span class="badge bg-danger tem-msg">5</span>
+                            </a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="tab-pane fade" id="amanha" role="tabpanel" aria-labelledby="amanha-tab">...</div>
     </div>
-</main><?php }
+</div><?php }
 }
