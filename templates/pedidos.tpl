@@ -34,7 +34,7 @@
                 <div class="metric">
                     <span class="icon"><i class="fa fa-shopping-bag"></i></span>
                     <p>
-                        <span class="number">8</span>
+                        <span class="number">{$total_pedidos_hoje}</span>
                         <span class="title">Recebidos</span>
                     </p>
                 </div>
@@ -59,22 +59,22 @@
             </div>
         </div>
     </div>
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item active">
-            <a class="nav-link" id="hoje-tab" data-toggle="tab" href="#hoje" role="tab" aria-controls="hoje"
-                aria-selected="true">Hoje</a>
+        {foreach from=$lista_dias_pedido key=k item=v}
+        <li class="nav-item {if $k == 0}active{/if}">
+            <a class="nav-link" id="{$k}tab" data-toggle="tab" href="#tab{$k}" role="tab" aria-controls="hoje"
+                aria-selected="true">{if $v.dt_entrega|date_format:"%Y-%m-%d" == $dt_hoje} Hoje {elseif
+                $v.dt_entrega|date_format:"%Y-%m-%d" == $dt_amanha|date_format:"%Y-%m-%d"} Amanhã
+                {else}{$v.dt_entrega|date_format:"%d/%m"}{/if}</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" id="amanha-tab" data-toggle="tab" href="#amanha" role="tab" aria-controls="amanha"
-                aria-selected="false">Amanhã</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="amanha-tab" data-toggle="tab" href="#amanha" role="tab" aria-controls="amanha"
-                aria-selected="false">22/02</a>
-        </li>
+        {/foreach}
     </ul>
+
+
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
-        <div class="tab-pane fade show active in" id="hoje" role="tabpanel" aria-labelledby="hoje-tab">
+        {foreach from=$lista_dias_pedido key=k item=v}
+        <div class="tab-pane fade {if $k == 0}active in{/if}" id="tab{$k}" role="tabpanel" aria-labelledby="tab{$k}">
             <table id="table-{$nome_pagina}" class="table table-striped table-sm clean-table">
                 <thead>
                     <tr class="border-top-remove">
@@ -90,25 +90,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {foreach from=$lista_pedidos key=i item=dados}
+                    {if $dados.dt_entrega|date_format:"%Y-%m-%d" == $v.dt_entrega|date_format:"%Y-%m-%d"}
                     <tr>
-                        <td>0001</td>
-                        <td>João da Silva</td>
-                        <td>Pizza brócolis
-                            <button type="button" class="badge badge-warning btn btn-warning btn-sm"
-                                data-container="body" data-toggle="popover" data-placement="right"
-                                data-content="Sem borda por favor">Obs</button>
-                        </td>
-                        <td>Metrô Liberdade</td>
-                        <td>12h45</td>
-                        <td>Online</td>
+                        <td>000{$dados.id_pedido}</td>
+                        <td>{$dados.nome_completo}</td>
+                        <td>Pizza brócolis </td>
+                        <td>{$dados.endereco}</td>
+                        <td>{$dados.dt_entrega|date_format:'%Hh%M'}</td>
+                        <td>{$dados.tipo_pagamento}</td>
                         <td>R$ 20,00</td>
                         <td>
                             <div class="form-group mb-0">
                                 <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
-                                    <option>Recebido</option>
-                                    <option>Saiu para entrega</option>
-                                    <option selected>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
+                                    {foreach from=$lista_status_pedidos key=i item=status}
+                                    <option {if $status.nome_status==$dados.status_pedido}selected{/if}
+                                        value="{$status.id}">{$status.nome_status}</option>
+                                    {/foreach}
                                 </select>
                             </div>
                         </td>
@@ -119,63 +117,17 @@
                             </a>
                         </td>
                     </tr>
+                    {/if}
+                    {/foreach}
                     <tr>
-                        <td>0002</td>
-                        <td>Cris Telis</td>
-                        <td>Nhoque congelado</td>
-                        <td>Parada Inglesa</td>
-                        <td>13h15</td>
-                        <td>Online</td>
-                        <td>R$ 15,00</td>
-                        <td>
-                            <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
-                                    <option>Recebido</option>
-                                    <option selected>Saiu para entrega</option>
-                                    <option>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i class="fa fa-comment-alt icon-msg-pedidos"></i>
-                                <span class="badge bg-danger tem-msg">5</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="novo-pedido">
-                        <td>0003</td>
-                        <td>Hugh Laurie</td>
-                        <td>Feijoada<br>Refrigerante Hibisco</td>
-                        <td>Consolação</td>
-                        <td>11h45</td>
-                        <td>Na retirada</td>
-                        <td>R$ 28,00</td>
-                        <td>
-                            <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
-                                    <option selected>Novo</option>
-                                    <option>Recebido</option>
-                                    <option>Saiu para entrega</option>
-                                    <option>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i class="fa fa-comment-alt icon-msg-pedidos"></i>
-
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>0004</td>
+                        <td>0007</td>
                         <td>Sr. Barriga</td>
-                        <td>Feijoada<br>Refrigerante Hibisco<br>Salada de pote</td>
+                        <td>Feijoada<br>Refrigerante Hibisco<br>Salada de pote<button type="button"
+                                class="badge badge-warning btn btn-warning btn-sm" data-container="body"
+                                data-toggle="popover" data-placement="right"
+                                data-content="Sem borda por favor">Obs</button></td>
                         <td>Anhangabaú</td>
-                        <td>11h45</td>
+                        <td>12h45</td>
                         <td>Na retirada</td>
                         <td>R$ 28,00</td>
                         <td>
@@ -199,6 +151,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane fade" id="amanha" role="tabpanel" aria-labelledby="amanha-tab">...</div>
+        {/foreach}
     </div>
 </div>

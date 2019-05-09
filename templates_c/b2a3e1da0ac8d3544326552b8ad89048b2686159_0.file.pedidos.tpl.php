@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-07 04:38:54
+/* Smarty version 3.1.33, created on 2019-05-09 05:46:14
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cd0efbe0275a3_54869397',
+  'unifunc' => 'content_5cd3a286e530a2_55408762',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1557196730,
+      1 => 1557373569,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+function content_5cd3a286e530a2_55408762 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
+?>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -57,7 +59,8 @@ function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="metric">
                     <span class="icon"><i class="fa fa-shopping-bag"></i></span>
                     <p>
-                        <span class="number">8</span>
+                        <span class="number"><?php echo $_smarty_tpl->tpl_vars['total_pedidos_hoje']->value;?>
+</span>
                         <span class="title">Recebidos</span>
                     </p>
                 </div>
@@ -82,22 +85,38 @@ function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item active">
-            <a class="nav-link" id="hoje-tab" data-toggle="tab" href="#hoje" role="tab" aria-controls="hoje"
-                aria-selected="true">Hoje</a>
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_dias_pedido']->value, 'v', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+?>
+        <li class="nav-item <?php if ($_smarty_tpl->tpl_vars['k']->value == 0) {?>active<?php }?>">
+            <a class="nav-link" id="<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+tab" data-toggle="tab" href="#tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+" role="tab" aria-controls="hoje"
+                aria-selected="true"><?php if (smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%Y-%m-%d") == $_smarty_tpl->tpl_vars['dt_hoje']->value) {?> Hoje <?php } elseif (smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%Y-%m-%d") == smarty_modifier_date_format($_smarty_tpl->tpl_vars['dt_amanha']->value,"%Y-%m-%d")) {?> Amanhã
+                <?php } else {
+echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%d/%m");
+}?></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" id="amanha-tab" data-toggle="tab" href="#amanha" role="tab" aria-controls="amanha"
-                aria-selected="false">Amanhã</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="amanha-tab" data-toggle="tab" href="#amanha" role="tab" aria-controls="amanha"
-                aria-selected="false">22/02</a>
-        </li>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </ul>
+
+
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
-        <div class="tab-pane fade show active in" id="hoje" role="tabpanel" aria-labelledby="hoje-tab">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_dias_pedido']->value, 'v', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+?>
+        <div class="tab-pane fade <?php if ($_smarty_tpl->tpl_vars['k']->value == 0) {?>active in<?php }?>" id="tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+" role="tabpanel" aria-labelledby="tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
+">
             <table id="table-<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 " class="table table-striped table-sm clean-table">
                 <thead>
@@ -114,112 +133,73 @@ function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl)
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_pedidos']->value, 'dados', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['dados']->value) {
+?>
+                    <?php if (smarty_modifier_date_format($_smarty_tpl->tpl_vars['dados']->value['dt_entrega'],"%Y-%m-%d") == smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%Y-%m-%d")) {?>
                     <tr>
-                        <td>0001</td>
-                        <td>João da Silva</td>
-                        <td>Pizza brócolis
-                            <button type="button" class="badge badge-warning btn btn-warning btn-sm"
-                                data-container="body" data-toggle="popover" data-placement="right"
-                                data-content="Sem borda por favor">Obs</button>
-                        </td>
-                        <td>Metrô Liberdade</td>
-                        <td>12h45</td>
-                        <td>Online</td>
+                        <td>000<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['nome_completo'];?>
+</td>
+                        <td>Pizza brócolis </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['endereco'];?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['dados']->value['dt_entrega'],'%Hh%M');?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['tipo_pagamento'];?>
+</td>
                         <td>R$ 20,00</td>
                         <td>
                             <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
-                                    <option>Recebido</option>
-                                    <option>Saiu para entrega</option>
+                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
+                                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_status_pedidos']->value, 'status', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['status']->value) {
+?>
+                                    <option <?php if ($_smarty_tpl->tpl_vars['status']->value['nome_status'] == $_smarty_tpl->tpl_vars['dados']->value['status_pedido']) {?>selected<?php }?>
+                                        value="<?php echo $_smarty_tpl->tpl_vars['status']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['status']->value['nome_status'];?>
+</option>
+                                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                                    <!-- <option>Saiu para entrega</option>
                                     <option selected>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
+                                    <option>Cancelado</option> -->
                                 </select>
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
                             <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i style="
-                                        font-size: 19px;
-                                        margin-right: 0px;
-                                        margin-top: 5px;
-                                        vertical-align: middle;
-                                        " class="fa fa-comment-alt"></i>
+                                <i class="fa fa-comment-alt icon-msg-pedidos"></i>
                                 <span class="badge bg-danger tem-msg">5</span>
                             </a>
                         </td>
                     </tr>
+                    <?php }?>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <tr>
-                        <td>0002</td>
-                        <td>Cris Telis</td>
-                        <td>Nhoque congelado</td>
-                        <td>Parada Inglesa</td>
-                        <td>13h15</td>
-                        <td>Online</td>
-                        <td>R$ 15,00</td>
-                        <td>
-                            <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
-                                    <option>Recebido</option>
-                                    <option selected>Saiu para entrega</option>
-                                    <option>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i style="
-                                            font-size: 19px;
-                                            margin-right: 0px;
-                                            margin-top: 5px;
-                                            vertical-align: middle;
-                                            " class="fa fa-comment-alt"></i>
-                                <span class="badge bg-danger tem-msg">5</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="novo-pedido">
-                        <td>0003</td>
-                        <td>Hugh Laurie</td>
-                        <td>Feijoada<br>Refrigerante Hibisco</td>
-                        <td>Consolação</td>
-                        <td>11h45</td>
-                        <td>Na retirada</td>
-                        <td>R$ 28,00</td>
-                        <td>
-                            <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
-                                    <option selected>Novo</option>
-                                    <option>Recebido</option>
-                                    <option>Saiu para entrega</option>
-                                    <option>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i style="
-                                            font-size: 19px;
-                                            margin-right: 0px;
-                                            margin-top: 5px;
-                                            vertical-align: middle;
-                                            " class="fa fa-comment-alt"></i>
-
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>0004</td>
+                        <td>0007</td>
                         <td>Sr. Barriga</td>
-                        <td>Feijoada<br>Refrigerante Hibisco<br>Salada de pote</td>
+                        <td>Feijoada<br>Refrigerante Hibisco<br>Salada de pote<button type="button"
+                                class="badge badge-warning btn btn-warning btn-sm" data-container="body"
+                                data-toggle="popover" data-placement="right"
+                                data-content="Sem borda por favor">Obs</button></td>
                         <td>Anhangabaú</td>
-                        <td>11h45</td>
+                        <td>12h45</td>
                         <td>Na retirada</td>
                         <td>R$ 28,00</td>
                         <td>
                             <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control form-control-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
 
                                     <option selected>Recebido</option>
                                     <option>Saiu para entrega</option>
@@ -230,12 +210,7 @@ function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl)
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
                             <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i style="
-                                            font-size: 19px;
-                                            margin-right: 0px;
-                                            margin-top: 5px;
-                                            vertical-align: middle;
-                                            " class="fa fa-comment-alt"></i>
+                                <i class="fa fa-comment-alt icon-msg-pedidos"></i>
                                 <span class="badge bg-danger tem-msg">5</span>
                             </a>
                         </td>
@@ -243,7 +218,10 @@ function content_5cd0efbe0275a3_54869397 (Smarty_Internal_Template $_smarty_tpl)
                 </tbody>
             </table>
         </div>
-        <div class="tab-pane fade" id="amanha" role="tabpanel" aria-labelledby="amanha-tab">...</div>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 </div><?php }
 }
