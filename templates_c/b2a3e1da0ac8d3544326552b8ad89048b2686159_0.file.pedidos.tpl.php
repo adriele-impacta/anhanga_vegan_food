@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-09 05:46:14
+/* Smarty version 3.1.33, created on 2019-05-13 04:07:30
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cd3a286e530a2_55408762',
+  'unifunc' => 'content_5cd8d162878069_12875898',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1557373569,
+      1 => 1557713242,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd3a286e530a2_55408762 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd8d162878069_12875898 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -118,7 +118,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars[
 " role="tabpanel" aria-labelledby="tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
 ">
             <table id="table-<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
-" class="table table-striped table-sm clean-table">
+" class="table table-striped table-sm no-datatable">
                 <thead>
                     <tr class="border-top-remove">
                         <th class="no-sort">#</th>
@@ -144,7 +144,21 @@ foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars[
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['nome_completo'];?>
 </td>
-                        <td>Pizza brócolis </td>
+                        <td>
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_produtos']->value, 'produto', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['produto']->value) {
+?>
+                            <?php if ($_smarty_tpl->tpl_vars['dados']->value['id_pedido'] == $_smarty_tpl->tpl_vars['produto']->value['id_pedido']) {?>
+                                <?php echo $_smarty_tpl->tpl_vars['produto']->value['id_produto'];?>
+<br>
+                            <?php }?>
+                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                        </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['endereco'];?>
 </td>
                         <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['dados']->value['dt_entrega'],'%Hh%M');?>
@@ -168,9 +182,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars[
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                                    <!-- <option>Saiu para entrega</option>
-                                    <option selected>Chegou no local de entrega</option>
-                                    <option>Cancelado</option> -->
                                 </select>
                             </div>
                         </td>

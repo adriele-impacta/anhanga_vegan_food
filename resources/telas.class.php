@@ -88,4 +88,32 @@ class Telas extends Smarty
         $smarty->assign("conteudo_pagina", "pedidos.tpl");
         $smarty->display("base.tpl");
     }
+
+    public function usr_app($acao = null)
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Usuários do Aplicativo");
+        $smarty->assign("menu_ativo", "usuarios");
+
+        if (isset($acao)) {
+            $smarty->assign("conteudo_pagina", "usr_app_form.tpl");
+        } else {
+            $smarty->assign("conteudo_pagina", "usr_app_lista.tpl");
+        }
+        $smarty->display("base.tpl");
+    }
+
+    public function usr_adm($acao = null)
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Usuários Administrativos");
+        $smarty->assign("menu_ativo", "usuarios");
+
+        if (isset($acao)) {
+            $smarty->assign("conteudo_pagina", "usr_adm_form.tpl");
+        } else {
+            $smarty->assign("conteudo_pagina", "usr_adm_lista.tpl");
+        }
+        $smarty->display("base.tpl");
+    }
 }

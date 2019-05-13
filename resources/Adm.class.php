@@ -10,23 +10,17 @@ class Adm extends Base
             $this->camposValores = array(
                 "id" => null,
                 "nome_completo" => null,
+                "cpf" => null,
+                "dt_nascimento" => null,
+                "dt_criacao" => null,
+                "criado_por" => null,
+                "dt_delete" => null,
+                "deletado_por" => null
                
             );
         } else {
             $this->camposValores = $campos;
         }
         $this->campoPk = "id";
-    }
-
-    public function logado($id_adm)
-    {
-        if (!empty($id_adm)) {
-
-            $this->extrasSelect = "WHERE id = $id_adm;";
-            $this->selecionaCampos($this);
-
-            $res = $this->retornaDados();
-            $this->nome_completo = $res->nome_completo;
-        }
     }
 }

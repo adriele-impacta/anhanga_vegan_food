@@ -75,7 +75,7 @@
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
         {foreach from=$lista_dias_pedido key=k item=v}
         <div class="tab-pane fade {if $k == 0}active in{/if}" id="tab{$k}" role="tabpanel" aria-labelledby="tab{$k}">
-            <table id="table-{$nome_pagina}" class="table table-striped table-sm clean-table">
+            <table id="table-{$nome_pagina}" class="table table-striped table-sm no-datatable">
                 <thead>
                     <tr class="border-top-remove">
                         <th class="no-sort">#</th>
@@ -95,14 +95,20 @@
                     <tr>
                         <td>000{$dados.id_pedido}</td>
                         <td>{$dados.nome_completo}</td>
-                        <td>Pizza brócolis </td>
+                        <td>
+                            {foreach from=$lista_produtos key=i item=produto}
+                            {if $dados.id_pedido == $produto.id_pedido}
+                                {$produto.id_produto}<br>
+                            {/if}
+                            {/foreach}
+                        </td>
                         <td>{$dados.endereco}</td>
                         <td>{$dados.dt_entrega|date_format:'%Hh%M'}</td>
                         <td>{$dados.tipo_pagamento}</td>
                         <td>R$ 20,00</td>
                         <td>
                             <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control input-sm" id="">
                                     {foreach from=$lista_status_pedidos key=i item=status}
                                     <option {if $status.nome_status==$dados.status_pedido}selected{/if}
                                         value="{$status.id}">{$status.nome_status}</option>

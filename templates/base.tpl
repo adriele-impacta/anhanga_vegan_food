@@ -24,8 +24,6 @@
     <script src="{$LIB_DIR}vendor/jquery/jquery.min.js"></script>
     <script src="{$LIB_DIR}vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="{$LIB_DIR}vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="{$LIB_DIR}vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-    <script src="{$LIB_DIR}vendor/chartist/js/chartist.min.js"></script>
     <script src="{$LIB_DIR}js/klorofil-common.js"></script>
     <script src="{$LIB_DIR}vendor/datatable/js/datatables.js"></script>
 </head>
@@ -112,7 +110,7 @@
                         </li>
 
                         <li>
-                            <a href="#menu_usuarios" data-toggle="collapse" class="collapsed"><i
+                            <a href="#menu_usuarios" data-toggle="collapse" class="collapsed {if $menu_ativo == "usuarios"}active{/if}"><i
                                     class="fa fa-users"></i> <span>Usuários</span> <i
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">

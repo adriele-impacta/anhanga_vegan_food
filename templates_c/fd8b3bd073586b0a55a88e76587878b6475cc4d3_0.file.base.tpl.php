@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-09 04:06:36
+/* Smarty version 3.1.33, created on 2019-05-12 16:44:07
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cd38b2cf0d7a0_70229095',
+  'unifunc' => 'content_5cd83137ce59e0_94993099',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1557198498,
+      1 => 1557672243,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd38b2cf0d7a0_70229095 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd83137ce59e0_94993099 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -62,14 +62,6 @@ vendor/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/jquery-slimscroll/jquery.slimscroll.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-vendor/chartist/js/chartist.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
@@ -170,7 +162,7 @@ index.php?pagina=tipo_produto">Tipo</a></li>
                         </li>
 
                         <li>
-                            <a href="#menu_usuarios" data-toggle="collapse" class="collapsed"><i
+                            <a href="#menu_usuarios" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "usuarios") {?>active<?php }?>"><i
                                     class="fa fa-users"></i> <span>Usuários</span> <i
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">

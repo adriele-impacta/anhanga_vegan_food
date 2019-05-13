@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-06 00:39:26
+/* Smarty version 3.1.33, created on 2019-05-12 15:45:30
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\tipo_pagamento_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ccf661eec2a43_60212181',
+  'unifunc' => 'content_5cd8237af0c189_70882145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e359650793aa22ba2552952f19e23227cb939589' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\tipo_pagamento_form.tpl',
-      1 => 1557095945,
+      1 => 1557096879,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ccf661eec2a43_60212181 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd8237af0c189_70882145 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['msg_retorno']->value)) {?>
 <div class="alert alert-<?php echo $_smarty_tpl->tpl_vars['class_retorno']->value;?>
 " role="alert"><?php echo $_smarty_tpl->tpl_vars['msg_retorno']->value;?>
@@ -36,7 +36,7 @@ if (isset($_smarty_tpl->tpl_vars['msg_retorno']->value)) {?>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=home">Home</a></li>
+index.php?pagina=pedidos">Home</a></li>
         <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=tipo_pagamento"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 </a></li>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-06 00:49:52
+/* Smarty version 3.1.33, created on 2019-05-11 21:11:14
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\tipo_pagamento_lista.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ccf6890e157e2_48935303',
+  'unifunc' => 'content_5cd71e5236ea76_20944087',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ec457de8d0aa668634550686757bdb5492bad48' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\tipo_pagamento_lista.tpl',
-      1 => 1557096587,
+      1 => 1557096871,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ccf6890e157e2_48935303 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd71e5236ea76_20944087 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel-body">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'URL_DIR');?>
-index.php?pagina=produtos">Home</a></li>
+index.php?pagina=pedidos">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 </li>
             </ol>
