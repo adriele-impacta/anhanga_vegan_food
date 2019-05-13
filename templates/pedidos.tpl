@@ -108,7 +108,7 @@
                         <td>R$ 20,00</td>
                         <td>
                             <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="">
+                                <select class="col-lg-9 form-control input-sm sts_pedido" data-cod="{$dados.id_pedido}" id="muda_status{$dados.id_pedido}">
                                     {foreach from=$lista_status_pedidos key=i item=status}
                                     <option {if $status.nome_status==$dados.status_pedido}selected{/if}
                                         value="{$status.id}">{$status.nome_status}</option>

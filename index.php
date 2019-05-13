@@ -47,8 +47,12 @@ switch ($pagina) {
         break;
 
     case 'pedidos':
-        require_once CONTROLLER_DIR . "$pagina/index.php";
-        $tela->pedidos();
+        if (isset($acao)) {
+            require_once CONTROLLER_DIR . "$pagina/$acao.php";
+        } else {
+            require_once CONTROLLER_DIR . "$pagina/index.php";
+        }
+        $tela->pedidos($acao);
         break;
 
     case 'usr_app':

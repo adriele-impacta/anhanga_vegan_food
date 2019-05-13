@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-13 04:07:30
+/* Smarty version 3.1.33, created on 2019-05-13 04:41:30
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cd8d162878069_12875898',
+  'unifunc' => 'content_5cd8d95ab55909_28273976',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1557713242,
+      1 => 1557715194,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd8d162878069_12875898 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cd8d95ab55909_28273976 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -168,7 +168,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <td>R$ 20,00</td>
                         <td>
                             <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
+                                <select class="col-lg-9 form-control input-sm sts_pedido" data-cod="<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
+" id="muda_status<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
+">
                                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_status_pedidos']->value, 'status', false, 'i');
 if ($_from !== null) {

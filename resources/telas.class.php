@@ -79,14 +79,16 @@ class Telas extends Smarty
         $smarty->display("base.tpl");
     }
 
-    public function pedidos()
+    public function pedidos($acao = null)
     {
         global $smarty;
         $smarty->assign("nome_pagina", "Pedidos");
         $smarty->assign("menu_ativo", "pedidos");
 
-        $smarty->assign("conteudo_pagina", "pedidos.tpl");
-        $smarty->display("base.tpl");
+        if($acao !== "muda_status"){
+            $smarty->assign("conteudo_pagina", "pedidos.tpl");
+            $smarty->display("base.tpl");
+        }
     }
 
     public function usr_app($acao = null)

@@ -128,8 +128,6 @@ abstract class Banco
 
         $sql .= "WHERE " . $objeto->campoPk . " = ";
         $sql .= is_numeric($objeto->valorPk) ? $objeto->valorPk : "'" . $objeto->valorPk . "'";
-
-        
         return $this->executaSQL($sql);
 
     } // rotina de update
