@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-20 01:22:07
+/* Smarty version 3.1.33, created on 2019-05-20 01:50:36
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\categorias_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ce1e51fdb7354_02649830',
+  'unifunc' => 'content_5ce1ebcc23fea0_65181045',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9c5e83593d8bd713edb141cffd3a59b99af34f66' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\categorias_form.tpl',
-      1 => 1558308123,
+      1 => 1558309830,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ce1e51fdb7354_02649830 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ce1ebcc23fea0_65181045 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['msg_retorno']->value)) {?>
 <div class="alert alert-<?php echo $_smarty_tpl->tpl_vars['class_retorno']->value;?>
 " role="alert"><?php echo $_smarty_tpl->tpl_vars['msg_retorno']->value;?>
@@ -71,7 +71,7 @@ echo $_smarty_tpl->tpl_vars['nome_categoria']->value;
             <?php if (isset($_smarty_tpl->tpl_vars['imagem']->value)) {?>
             <img id="img_e" src="<?php echo $_smarty_tpl->tpl_vars['IMG_DIR']->value;?>
 categorias/<?php echo $_smarty_tpl->tpl_vars['imagem']->value;?>
-" width="450" />
+" width="250" />
             <?php }?>
           </div>
           <br>

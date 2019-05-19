@@ -6,7 +6,6 @@ abstract class Banco
     public $senha = '$ej9j6ua';
     public $nomeBanco = 'mnihouze_db_VEGAN';
 
-   
 
     public $conexao = null;
     public $dataset = null;

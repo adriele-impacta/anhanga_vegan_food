@@ -34,7 +34,7 @@
           </span>
           <div id="files" class="files">
             {if isset($imagem)}
-            <img id="img_e" src="{$IMG_DIR}categorias/{$imagem}" width="450" />
+            <img id="img_e" src="{$IMG_DIR}categorias/{$imagem}" width="250" />
             {/if}
           </div>
           <br>
