@@ -1,7 +1,7 @@
 <?php
 require_once './resources/Base.class.php';
 require_once './configs/config.php';
-require_once CLASSES_DIR . "Telas.class.php";
+require_once CLASSES_DIR . 'Telas.class.php';
 
 $tela = new Telas();
 switch ($pagina) {  

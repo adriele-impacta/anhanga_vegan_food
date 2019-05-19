@@ -1,13 +1,13 @@
 <?php
 require_once CLASSES_DIR . 'PedidosView.class.php';
 require_once CLASSES_DIR . 'StatusPedido.class.php';
-require_once CLASSES_DIR . 'ListaPedido.class.php';
+require_once CLASSES_DIR . 'ListaPedidoView.class.php';
 
 define('HOJE', date('Y-m-d'));
 $lista_dias_pedido = array();
 
 $dias_pedido = new PedidosView();
-$dias_pedido->extrasSelect = 'GROUP BY DATE(dt_entrega);';
+$dias_pedido->extrasSelect = 'WHERE DATE(dt_entrega) >= DATE(NOW()) GROUP BY DATE(dt_entrega);';
 $dias_pedido->selecionaCampos($dias_pedido);
 while ($res = $dias_pedido->retornaDados()) {
         array_push($lista_dias_pedido, get_object_vars($res)); //stdObject para array
@@ -37,7 +37,7 @@ while ($res = $status_pedidos->retornaDados()) {
 
 
 $lista_produtos = array();
-$produtos = new ListaPedido();
+$produtos = new ListaPedidoView();
 $produtos->selecionaCampos($produtos);
 while ($res = $produtos->retornaDados()) {
         array_push($lista_produtos, get_object_vars($res)); //stdObject para array

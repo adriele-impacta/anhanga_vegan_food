@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-13 04:41:30
+/* Smarty version 3.1.33, created on 2019-05-19 00:55:12
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cd8d95ab55909_28273976',
+  'unifunc' => 'content_5ce08d501cca62_60674438',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1557715194,
+      1 => 1558220010,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd8d95ab55909_28273976 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ce08d501cca62_60674438 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -151,7 +151,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['produto']->value) {
 ?>
                             <?php if ($_smarty_tpl->tpl_vars['dados']->value['id_pedido'] == $_smarty_tpl->tpl_vars['produto']->value['id_pedido']) {?>
-                                <?php echo $_smarty_tpl->tpl_vars['produto']->value['id_produto'];?>
+                                <?php echo $_smarty_tpl->tpl_vars['produto']->value['nome_produto'];?>
 <br>
                             <?php }?>
                             <?php

@@ -98,7 +98,7 @@
                         <td>
                             {foreach from=$lista_produtos key=i item=produto}
                             {if $dados.id_pedido == $produto.id_pedido}
-                                {$produto.id_produto}<br>
+                                {$produto.nome_produto}<br>
                             {/if}
                             {/foreach}
                         </td>
