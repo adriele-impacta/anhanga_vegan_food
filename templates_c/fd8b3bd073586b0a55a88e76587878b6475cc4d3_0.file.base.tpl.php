@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-12 16:44:07
+/* Smarty version 3.1.33, created on 2019-05-19 23:43:47
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cd83137ce59e0_94993099',
+  'unifunc' => 'content_5ce1ce138eba49_49050616',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1557672243,
+      1 => 1558302150,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cd83137ce59e0_94993099 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ce1ce138eba49_49050616 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -153,7 +153,7 @@ index.php?pagina=status_pedido">Status do pedido</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=produtos">Novo produto</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=tipo_produto">Tipo</a></li>
+index.php?pagina=tipo_produto">Categorias</a></li>
                                 </ul>
                             </div>
                         </li>

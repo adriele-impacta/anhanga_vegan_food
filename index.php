@@ -32,14 +32,14 @@ switch ($pagina) {
         $tela->status_pedido($acao);
         break; 
 
-    case 'tipo_produto':
+        case 'categorias':
         if (isset($acao)) {
             require_once CONTROLLER_DIR . "$pagina/$acao.php";
         } else {
             require_once CONTROLLER_DIR . "$pagina/index.php";
         }
-        $tela->tipo_produto();
-        break;
+        $tela->categorias($acao);
+        break; 
 
     case 'home':
         require_once CONTROLLER_DIR . "$pagina.php";

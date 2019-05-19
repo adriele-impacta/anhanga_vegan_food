@@ -1,6 +1,6 @@
 <?php
 require_once LOC . 'lib/smarty/Smarty.class.php';
-
+ 
 $smarty = new Smarty;
 $smarty->template_dir = TEMPLATE_DIR;
 $smarty->config_dir = LOC . "configs/";
@@ -12,7 +12,7 @@ $smarty->assign("LOC", LOC);
 $smarty->assign("LIB_DIR", LIB_DIR);
 $smarty->assign("IMG_DIR", IMG_DIR);
 if(isset($nome_usuario)){
-$smarty->assign("nome_usuario", $nome_usuario);
+    $smarty->assign("nome_usuario", $nome_usuario);
 }
 $smarty->assign("ano", date('Y'));
 class Telas extends Smarty
@@ -23,6 +23,7 @@ class Telas extends Smarty
         $smarty->display("home.tpl");
     }
 
+    // Menu Produtos
     public function produtos($acao = null)
     {
         global $smarty;
@@ -39,7 +40,33 @@ class Telas extends Smarty
         $smarty->display("base.tpl");
         }
     }
+    public function categorias($acao = null)
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Categorias");
+        $smarty->assign("menu_ativo", "produtos");
 
+        if (isset($acao)) {
+            $smarty->assign("upload_arquivo", "true");
+            $smarty->assign("conteudo_pagina", "categorias_form.tpl");
+        } else {
+            $smarty->assign("conteudo_pagina", "categorias.tpl");
+        }
+        $smarty->display("base.tpl");
+    }
+
+    // Menu Pedidos
+    public function pedidos($acao = null)
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Pedidos");
+        $smarty->assign("menu_ativo", "pedidos");
+
+        if($acao !== "muda_status"){
+            $smarty->assign("conteudo_pagina", "pedidos.tpl");
+            $smarty->display("base.tpl");
+        }
+    }
     public function tipo_pagamento($acao = null)
     {
         global $smarty;
@@ -68,29 +95,7 @@ class Telas extends Smarty
         $smarty->display("base.tpl");
     }
 
-    public function tipo_produto()
-    {
-        global $smarty;
-        $smarty->assign("id_pagina", "tipo_produto");
-        $smarty->assign("nome_pagina", "Tipos de produto");
-        $smarty->assign("menu_ativo", "produtos");
-        
-        $smarty->assign("conteudo_pagina", "tipo_produto.tpl");
-        $smarty->display("base.tpl");
-    }
-
-    public function pedidos($acao = null)
-    {
-        global $smarty;
-        $smarty->assign("nome_pagina", "Pedidos");
-        $smarty->assign("menu_ativo", "pedidos");
-
-        if($acao !== "muda_status"){
-            $smarty->assign("conteudo_pagina", "pedidos.tpl");
-            $smarty->display("base.tpl");
-        }
-    }
-
+    // Menu Usuários
     public function usr_app($acao = null)
     {
         global $smarty;
@@ -104,7 +109,6 @@ class Telas extends Smarty
         }
         $smarty->display("base.tpl");
     }
-
     public function usr_adm($acao = null)
     {
         global $smarty;

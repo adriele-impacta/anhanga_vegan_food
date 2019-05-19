@@ -101,7 +101,7 @@
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">
                                     <li><a href="{$URL}index.php?pagina=produtos">Novo produto</a></li>
-                                    <li><a href="{$URL}index.php?pagina=tipo_produto">Tipo</a></li>
+                                    <li><a href="{$URL}index.php?pagina=tipo_produto">Categorias</a></li>
                                 </ul>
                             </div>
                         </li>

@@ -13,6 +13,7 @@ class TipoProduto extends Base{
                 "id" => null,
                 "nome_categoria" => null,
                 "descricao_categoria" => null,
+                "imagem" => null,
                 "dt_criacao" => null,
                 "criado_por" => null,
                 "dt_delete" => null,

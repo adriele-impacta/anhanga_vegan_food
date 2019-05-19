@@ -9,12 +9,15 @@
         <div class="d-flex justify-content-between">
             <h3 class="page-title">{$nome_pagina}</h3>
             <div class="btn-toolbar mb-2 mb-md-0">
-                <a id="add-TipoProduto" data-page="Tipo de Produto" href="#" class="btn btn-success btn-sm">
+                <a href="index.php?pagina=categorias&acao=incluir" class="btn btn-success btn-sm">
                     <i class="fa fa-plus"></i> Adicionar
                 </a>
+                <!-- <a id="add-TipoProduto" data-page="Tipo de Produto" href="#" class="btn btn-success btn-sm">
+                    <i class="fa fa-plus"></i> Adicionar
+                </a> -->
             </div>
         </div>
-        <table id="table-{$id_pagina}" class="table table-striped table-sm clean-table">
+        <table id="table-{$menu_ativo}" class="table table-striped table-sm clean-table">
             <thead>
                 <tr>
                     <th class="no-sort">#</th>
@@ -23,15 +26,18 @@
                 </tr>
             </thead>
             <tbody>
-                {section name=sec1 loop=$lista_tipos}
+                {section name=sec1 loop=$lista_categorias}
                 <tr>
-                    <td>{$lista_tipos[sec1].id}</td>
-                    <td contenteditable="true" id="tipo_produto{$lista_tipos[sec1].id}" data-cod="{$lista_tipos[sec1].id}">{$lista_tipos[sec1].nome_categoria}</td>
-                    <td class="acoes_tipo_produto">
-                        <a class="text-primary editar-row" id="editar-row{$lista_tipos[sec1].id}" data-cod="{$lista_tipos[sec1].id}" href="javascript:">
+                    <td>{$lista_categorias[sec1].id}</td>
+                    <td contenteditable="true" id="categorias{$lista_categorias[sec1].id}"
+                        data-cod="{$lista_categorias[sec1].id}">{$lista_categorias[sec1].nome_categoria}</td>
+                    <td class="acoes_categorias">
+                        <a class="text-primary" id="editar"
+                            href="index.php?pagina=categorias&acao=alterar&id={$lista_categorias[sec1].id}">
                             <i class="far fa-edit"></i>
                         </a>
-                        <a class="text-danger" href="index.php?pagina=tipo_produto&acao=excluir&id={$lista_tipos[sec1].id}">
+                        <a class="text-danger"
+                            href="index.php?pagina=categorias&acao=excluir&id={$lista_categorias[sec1].id}">
                             <i class="far fa-trash-alt"></i>
                         </a>
                     </td>
