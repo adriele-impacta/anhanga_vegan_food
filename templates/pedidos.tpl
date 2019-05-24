@@ -105,7 +105,13 @@
                         <td>{$dados.endereco}</td>
                         <td>{$dados.dt_entrega|date_format:'%Hh%M'}</td>
                         <td>{$dados.tipo_pagamento}</td>
-                        <td>R$ 20,00</td>
+                        <td>R$ 
+                            {foreach from=$total_pedidos_hoje key=i item=total_valor}
+                                {if $dados.id_pedido == $total_valor.id_pedido}
+                                    {$total_valor.valor}
+                                {/if}
+                            {/foreach}
+                        </td>
                         <td>
                             <div class="form-group mb-0">
                                 <select class="col-lg-9 form-control input-sm sts_pedido" data-cod="{$dados.id_pedido}" id="muda_status{$dados.id_pedido}">
