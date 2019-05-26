@@ -95,6 +95,21 @@ class Telas extends Smarty
         $smarty->display("base.tpl");
     }
 
+    // Menu Eventos
+    public function eventos($acao = null)
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Eventos");
+        $smarty->assign("menu_ativo", "eventos");
+
+        if (isset($acao)) {
+            $smarty->assign("conteudo_pagina", "eventos_form.tpl");
+        } else {
+            $smarty->assign("conteudo_pagina", "eventos.tpl");
+        }
+        $smarty->display("base.tpl");
+    }
+
     // Menu Usuários
     public function usr_app($acao = null)
     {

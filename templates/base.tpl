@@ -105,7 +105,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="elements.html" class=""><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+                        <li><a href="{$URL}index.php?pagina=eventos" class=""><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
                         <li><a href="charts.html" class=""><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 

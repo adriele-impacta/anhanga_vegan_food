@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-26 23:12:41
+/* Smarty version 3.1.33, created on 2019-05-26 23:16:54
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceb0149553396_43789934',
+  'unifunc' => 'content_5ceb02465db303_91914759',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1558905141,
+      1 => 1558905276,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceb0149553396_43789934 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ceb02465db303_91914759 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -158,7 +158,8 @@ index.php?pagina=categorias">Categorias</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="elements.html" class=""><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=eventos" class=""><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
                         <li><a href="charts.html" class=""><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 

@@ -32,7 +32,7 @@ switch ($pagina) {
         $tela->status_pedido($acao);
         break; 
 
-        case 'categorias':
+    case 'categorias':
         if (isset($acao)) {
             require_once CONTROLLER_DIR . "$pagina/$acao.php";
         } else {
@@ -54,6 +54,15 @@ switch ($pagina) {
         }
         $tela->pedidos($acao);
         break;
+
+    case 'eventos':
+        if (isset($acao)) {
+            require_once CONTROLLER_DIR . "$pagina/$acao.php";
+        } else {
+            require_once CONTROLLER_DIR . "$pagina/index.php";
+        }
+        $tela->eventos($acao);
+        break;  
 
     case 'usr_app':
         if (isset($acao)) {
