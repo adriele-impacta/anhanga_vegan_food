@@ -52,7 +52,7 @@
                 <div class="metric">
                     <span class="icon"><i class="fa fa-coins"></i></span>
                     <p>
-                        <span class="number">R$ 185,00</span>
+                        <span class="number">R$ {$total_vendido|number_format:2:',':'.'}</span>
                         <span class="title">Total vendido</span>
                     </p>
                 </div>
@@ -106,7 +106,7 @@
                         <td>{$dados.dt_entrega|date_format:'%Hh%M'}</td>
                         <td>{$dados.tipo_pagamento}</td>
                         <td>R$ 
-                            {foreach from=$total_pedidos_hoje key=i item=total_valor}
+                            {foreach from=$total_pedido key=i item=total_valor}
                                 {if $dados.id_pedido == $total_valor.id_pedido}
                                     {$total_valor.valor}
                                 {/if}
