@@ -22,7 +22,6 @@ while ($res = $pedidos->retornaDados()) {
         array_push($lista_pedidos, get_object_vars($res)); //stdObject para array
 }
 
-
 $lista_status_pedidos = array();
 $status_pedidos = new StatusPedido();
 $status_pedidos->selecionaTudo($status_pedidos);
@@ -40,10 +39,14 @@ while ($res = $produtos->retornaDados()) {
         array_push($lista_produtos, get_object_vars($res)); //stdObject para array
 }
 
-
+$pendente = 0;
 $total_pedido = array();
 foreach ($lista_pedidos as $i => $ped) {
         $val = 0;
+        if($lista_pedidos[$i]['status_pedido'] == 'Recebido'){
+                $pendente++;
+        }
+        
         foreach ($lista_produtos as $j => $pro) {
                 if ($lista_pedidos[$i]['id_pedido'] === $lista_produtos[$j]['id_pedido']) {
                         $total_vendido += $lista_produtos[$j]['valor'];
@@ -65,3 +68,5 @@ $smarty->assign('lista_produtos', $lista_produtos);
 $smarty->assign('total_pedidos_hoje', $total_pedidos_hoje);
 $smarty->assign('total_pedido', $total_pedido);
 $smarty->assign('total_vendido', $total_vendido);
+
+$smarty->assign('pendente', $pendente);

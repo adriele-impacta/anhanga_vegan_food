@@ -43,7 +43,7 @@
                 <div class="metric">
                     <span class="icon"><i class="fa fa-hourglass-start"></i></span>
                     <p>
-                        <span class="number">3</span>
+                        <span class="number">{$pendente}</span>
                         <span class="title">Pendentes</span>
                     </p>
                 </div>
