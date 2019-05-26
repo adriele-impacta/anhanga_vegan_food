@@ -69,7 +69,7 @@
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
                                 {*<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
                                 <li><a href="#"><i class="lnr lnr-cog"></i> <span>Alterar Senha</span></a></li>*}
-                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
+                                <li><a href="{$URL}index.php?pagina=logout"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
                             </ul>
                         </li>
                     

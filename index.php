@@ -72,7 +72,11 @@ switch ($pagina) {
         }
         $tela->usr_adm($acao);
         break; 
+
+    case 'logout':
+        session_destroy();
+        header('Location: ' . URL . 'index.php?pagina=home');
         
     case 'notsession':
-    header('Location: ' . URL . 'index.php?pagina=home');
+        header('Location: ' . URL . 'index.php?pagina=home');
 }

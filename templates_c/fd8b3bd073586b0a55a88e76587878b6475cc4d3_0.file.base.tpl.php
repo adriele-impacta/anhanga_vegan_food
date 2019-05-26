@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-25 23:22:17
+/* Smarty version 3.1.33, created on 2019-05-26 23:12:41
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ce9b209026ae1_58933511',
+  'unifunc' => 'content_5ceb0149553396_43789934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1558819170,
+      1 => 1558905141,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ce9b209026ae1_58933511 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ceb0149553396_43789934 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -115,7 +115,8 @@ img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
  <i class="icon-submenu fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
-                                                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
+                                                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=logout"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
                             </ul>
                         </li>
                     

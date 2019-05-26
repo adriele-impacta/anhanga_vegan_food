@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-26 22:21:28
+/* Smarty version 3.1.33, created on 2019-05-26 23:12:56
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceaf5483e7295_49687206',
+  'unifunc' => 'content_5ceb0158bf1f41_13624443',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0b2d44212fb3d5a57b78e30ee9f07544745ba91' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\home.tpl',
-      1 => 1558819170,
+      1 => 1558905152,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceaf5483e7295_49687206 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ceb0158bf1f41_13624443 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br" class="fullscreen-bg">
 
@@ -63,7 +63,8 @@ img/logo.gif" alt="Anhangá Logo"
                                 <p class="lead">Bem vindo!</p>
                             </div>
 
-                            <form class="form-auth-small" method="POST" id="frmSave" action="index.php?pagina=home">
+                            <form class="form-auth-small" method="POST" id="frmSave" action="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=home">
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Usuário</label>
                                     <input type="text" class="form-control" name="usuario" placeholder="Usuário" required>

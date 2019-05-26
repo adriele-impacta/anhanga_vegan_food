@@ -32,7 +32,7 @@
                                 <p class="lead">Bem vindo!</p>
                             </div>
 
-                            <form class="form-auth-small" method="POST" id="frmSave" action="index.php?pagina=home">
+                            <form class="form-auth-small" method="POST" id="frmSave" action="{$URL}index.php?pagina=home">
                                 <div class="form-group">
                                     <label for="signin-email" class="control-label sr-only">Usuário</label>
                                     <input type="text" class="form-control" name="usuario" placeholder="Usuário" required>
