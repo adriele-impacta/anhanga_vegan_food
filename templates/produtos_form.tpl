@@ -57,7 +57,7 @@
           <!-- The container for the uploaded files-->
           <div id="files" class="files">
             {if isset($imagem)}
-            <img id="img_e" src="{$IMG_DIR}{$imagem}" width="450" />
+            <img id="img_e" src="{$IMG_DIR}{$imagem}" class="img-responsive" alt="{$nome_produto}" />
             {/if}
           </div>
           <br>

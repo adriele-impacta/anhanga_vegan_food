@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-26 23:42:37
+/* Smarty version 3.1.33, created on 2019-05-26 23:49:04
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\produtos_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceb084d5cb034_59549882',
+  'unifunc' => 'content_5ceb09d038b1d0_49114856',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e01b74d230aed741edef0b90b2c52dba61fd41b6' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\produtos_form.tpl',
-      1 => 1558819170,
+      1 => 1558907305,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceb084d5cb034_59549882 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ceb09d038b1d0_49114856 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 if (isset($_smarty_tpl->tpl_vars['msg_retorno']->value)) {?>
 <div class="alert alert-<?php echo $_smarty_tpl->tpl_vars['class_retorno']->value;?>
@@ -98,7 +98,8 @@ echo $_smarty_tpl->tpl_vars['valor']->value;
             <?php if (isset($_smarty_tpl->tpl_vars['imagem']->value)) {?>
             <img id="img_e" src="<?php echo $_smarty_tpl->tpl_vars['IMG_DIR']->value;
 echo $_smarty_tpl->tpl_vars['imagem']->value;?>
-" width="450" />
+" class="img-responsive" alt="<?php echo $_smarty_tpl->tpl_vars['nome_produto']->value;?>
+" />
             <?php }?>
           </div>
           <br>
