@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-26 23:00:13
+/* Smarty version 3.1.33, created on 2019-05-27 03:08:13
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceafe5dc9b244_52823248',
+  'unifunc' => 'content_5ceb387ddbb445_55626812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1558904407,
+      1 => 1558919175,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceafe5dc9b244_52823248 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ceb387ddbb445_55626812 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -101,7 +101,8 @@ tab" data-toggle="tab" href="#tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?
                 aria-selected="true"><?php if (smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%Y-%m-%d") == $_smarty_tpl->tpl_vars['dt_hoje']->value) {?> Hoje <?php } elseif (smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%Y-%m-%d") == smarty_modifier_date_format($_smarty_tpl->tpl_vars['dt_amanha']->value,"%Y-%m-%d")) {?> Amanhã
                 <?php } else {
 echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'],"%d/%m");
-}?></a>
+}?>
+            </a>
         </li>
         <?php
 }
@@ -119,8 +120,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars[
         <div class="tab-pane fade <?php if ($_smarty_tpl->tpl_vars['k']->value == 0) {?>active in<?php }?>" id="tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
 " role="tabpanel" aria-labelledby="tab<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
 ">
-            <table id="table-<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
-" class="table table-striped table-sm no-datatable">
+            <table id="table-<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;
+echo $_smarty_tpl->tpl_vars['k']->value;?>
+" class="table table-striped table-sm clean-datatable">
                 <thead>
                     <tr class="border-top-remove">
                         <th class="no-sort">#</th>

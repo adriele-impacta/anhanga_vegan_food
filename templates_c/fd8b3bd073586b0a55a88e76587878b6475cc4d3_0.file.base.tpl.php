@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-26 23:16:54
+/* Smarty version 3.1.33, created on 2019-05-27 01:36:48
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceb02465db303_91914759',
+  'unifunc' => 'content_5ceb23106268e6_53795813',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1558905276,
+      1 => 1558913795,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceb02465db303_91914759 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ceb23106268e6_53795813 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -159,7 +159,7 @@ index.php?pagina=categorias">Categorias</a></li>
                             </div>
                         </li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=eventos" class=""><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+index.php?pagina=eventos" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "eventos") {?>active<?php }?>"><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
                         <li><a href="charts.html" class=""><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 

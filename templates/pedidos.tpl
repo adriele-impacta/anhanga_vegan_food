@@ -66,7 +66,8 @@
             <a class="nav-link" id="{$k}tab" data-toggle="tab" href="#tab{$k}" role="tab" aria-controls="hoje"
                 aria-selected="true">{if $v.dt_entrega|date_format:"%Y-%m-%d" == $dt_hoje} Hoje {elseif
                 $v.dt_entrega|date_format:"%Y-%m-%d" == $dt_amanha|date_format:"%Y-%m-%d"} Amanhã
-                {else}{$v.dt_entrega|date_format:"%d/%m"}{/if}</a>
+                {else}{$v.dt_entrega|date_format:"%d/%m"}{/if}
+            </a>
         </li>
         {/foreach}
     </ul>
@@ -75,7 +76,7 @@
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
         {foreach from=$lista_dias_pedido key=k item=v}
         <div class="tab-pane fade {if $k == 0}active in{/if}" id="tab{$k}" role="tabpanel" aria-labelledby="tab{$k}">
-            <table id="table-{$nome_pagina}" class="table table-striped table-sm no-datatable">
+            <table id="table-{$nome_pagina}{$k}" class="table table-striped table-sm clean-datatable">
                 <thead>
                     <tr class="border-top-remove">
                         <th class="no-sort">#</th>
