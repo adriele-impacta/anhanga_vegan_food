@@ -67,6 +67,17 @@ class Telas extends Smarty
             $smarty->display("base.tpl");
         }
     }
+    public function historico()
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Histórico de pedidos");
+        $smarty->assign("menu_ativo", "pedidos");
+
+        $smarty->assign("conteudo_pagina", "historico.tpl");
+        $smarty->display("base.tpl");
+        
+    }
+
     public function tipo_pagamento($acao = null)
     {
         global $smarty;
@@ -108,6 +119,17 @@ class Telas extends Smarty
             $smarty->assign("conteudo_pagina", "eventos.tpl");
         }
         $smarty->display("base.tpl");
+    }
+
+    public function relatorio()
+    {
+        global $smarty;
+        $smarty->assign("nome_pagina", "Relatórios");
+        $smarty->assign("menu_ativo", "relatorio");
+        $smarty->assign("conteudo_pagina", "relatorio.tpl");
+        
+        $smarty->display("base.tpl");
+        
     }
 
     // Menu Usuários

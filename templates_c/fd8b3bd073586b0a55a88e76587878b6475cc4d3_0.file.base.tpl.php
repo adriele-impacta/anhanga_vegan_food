@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-27 01:36:48
+/* Smarty version 3.1.33, created on 2019-06-01 17:36:12
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceb23106268e6_53795813',
+  'unifunc' => 'content_5cf29b6c433135_15831918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1558913795,
+      1 => 1559403369,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceb23106268e6_53795813 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf29b6c433135_15831918 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -138,7 +138,7 @@ index.php?pagina=logout"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=pedidos">Pedidos</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=historico_pedidos">Histórico de Pedidos</a></li>
+index.php?pagina=historico">Histórico de Pedidos</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=tipo_pagamento">Tipo de pagamento</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
@@ -160,7 +160,8 @@ index.php?pagina=categorias">Categorias</a></li>
                         </li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=eventos" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "eventos") {?>active<?php }?>"><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
-                        <li><a href="charts.html" class=""><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
+                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
+index.php?pagina=relatorio" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "relatorio") {?>active<?php }?>"><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 
                         <li>

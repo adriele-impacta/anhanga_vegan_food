@@ -89,7 +89,7 @@
                             <div id="menu_pedidos" class="collapse">
                                 <ul class="nav">
                                     <li><a href="{$URL}index.php?pagina=pedidos">Pedidos</a></li>
-                                    <li><a href="{$URL}index.php?pagina=historico_pedidos">Histórico de Pedidos</a></li>
+                                    <li><a href="{$URL}index.php?pagina=historico">Histórico de Pedidos</a></li>
                                     <li><a href="{$URL}index.php?pagina=tipo_pagamento">Tipo de pagamento</a></li>
                                     <li><a href="{$URL}index.php?pagina=status_pedido">Status do pedido</a></li>
                                 </ul>
@@ -106,7 +106,7 @@
                             </div>
                         </li>
                         <li><a href="{$URL}index.php?pagina=eventos" class="collapsed {if $menu_ativo == "eventos"}active{/if}"><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
-                        <li><a href="charts.html" class=""><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
+                        <li><a href="{$URL}index.php?pagina=relatorio" class="collapsed {if $menu_ativo == "relatorio"}active{/if}"><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 
                         <li>

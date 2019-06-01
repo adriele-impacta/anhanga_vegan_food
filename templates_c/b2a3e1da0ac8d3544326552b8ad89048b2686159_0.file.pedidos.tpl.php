@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-27 03:08:13
+/* Smarty version 3.1.33, created on 2019-06-01 16:58:40
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceb387ddbb445_55626812',
+  'unifunc' => 'content_5cf292a0031a34_13738283',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1558919175,
+      1 => 1559401102,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceb387ddbb445_55626812 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf292a0031a34_13738283 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -154,10 +154,17 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['produto']->value) {
 ?>
-                            <?php if ($_smarty_tpl->tpl_vars['dados']->value['id_pedido'] == $_smarty_tpl->tpl_vars['produto']->value['id_pedido']) {?>
+                                <?php if ($_smarty_tpl->tpl_vars['dados']->value['id_pedido'] == $_smarty_tpl->tpl_vars['produto']->value['id_pedido']) {?>
                                 <?php echo $_smarty_tpl->tpl_vars['produto']->value['nome_produto'];?>
-<br>
-                            <?php }?>
+
+                                    <?php if ($_smarty_tpl->tpl_vars['produto']->value['obs']) {?>
+                                    <button type="button" class="badge badge-warning btn btn-warning btn-sm"
+                                        data-container="body" data-toggle="popover" data-placement="right"
+                                        data-content="<?php echo $_smarty_tpl->tpl_vars['produto']->value['obs'];?>
+">Obs</button>
+                                    <?php }?><br>
+
+                                <?php }?>
                             <?php
 }
 }
@@ -169,7 +176,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['dados']->value['tipo_pagamento'];?>
 </td>
-                        <td>R$ 
+                        <td>R$
                             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['total_pedido']->value, 'total_valor', false, 'i');
 if ($_from !== null) {
@@ -187,7 +194,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <td>
                             <div class="form-group mb-0">
                                 <select class="col-lg-9 form-control input-sm sts_pedido" data-cod="<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
-" id="muda_status<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
+"
+                                    id="muda_status<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
 ">
                                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_status_pedidos']->value, 'status', false, 'i');
@@ -217,35 +225,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                    <tr>
-                        <td>0007</td>
-                        <td>Sr. Barriga</td>
-                        <td>Feijoada<br>Refrigerante Hibisco<br>Salada de pote<button type="button"
-                                class="badge badge-warning btn btn-warning btn-sm" data-container="body"
-                                data-toggle="popover" data-placement="right"
-                                data-content="Sem borda por favor">Obs</button></td>
-                        <td>Anhangabaú</td>
-                        <td>12h45</td>
-                        <td>Na retirada</td>
-                        <td>R$ 28,00</td>
-                        <td>
-                            <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
-
-                                    <option selected>Recebido</option>
-                                    <option>Saiu para entrega</option>
-                                    <option>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i class="fa fa-comment-alt icon-msg-pedidos"></i>
-                                <span class="badge bg-danger tem-msg">5</span>
-                            </a>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
@@ -254,6 +233,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
-</div>
-<?php }
+</div><?php }
 }

@@ -32,7 +32,7 @@
             <i class="fa fa-plus"></i> Adicionar
             <input class="form-control" id="fileupload" type="file" name="files">
           </span>
-          <div id="files" class="files">
+          <div id="files" style="margin-top: 30px;" class="files">
             {if isset($imagem)}
             <img id="img_e" src="{$IMG_DIR}categorias/{$imagem}" width="150" class="img-responsive" alt="{$nome_categoria}" />
             {/if}

@@ -55,6 +55,11 @@ switch ($pagina) {
         $tela->pedidos($acao);
         break;
 
+    case 'historico':
+        require_once CONTROLLER_DIR . "pedidos/historico.php";
+        $tela->historico();
+        break;
+
     case 'eventos':
         if (isset($acao)) {
             require_once CONTROLLER_DIR . "$pagina/$acao.php";
@@ -63,6 +68,11 @@ switch ($pagina) {
         }
         $tela->eventos($acao);
         break;  
+
+    case 'relatorio':
+        require_once CONTROLLER_DIR . "$pagina/index.php";
+        $tela->relatorio();
+        break;
 
     case 'usr_app':
         if (isset($acao)) {

@@ -55,7 +55,7 @@
             <div class="progress-bar progress-bar-success"></div>
         </div> -->
           <!-- The container for the uploaded files-->
-          <div id="files" class="files">
+          <div id="files" style="margin-top: 30px;" class="files">
             {if isset($imagem)}
             <img id="img_e" src="{$IMG_DIR}{$imagem}" class="img-responsive" alt="{$nome_produto}" />
             {/if}

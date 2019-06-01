@@ -11,7 +11,8 @@ class ListaPedidoView extends Base{
                 "id_pedido" => null,
                 "nome_produto" => null,
                 "promocao" => null,
-                "valor" => null
+                "valor" => null,
+                "obs" => null
             );
         }
         else{

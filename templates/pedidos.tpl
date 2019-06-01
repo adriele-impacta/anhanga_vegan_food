@@ -98,15 +98,21 @@
                         <td>{$dados.nome_completo}</td>
                         <td>
                             {foreach from=$lista_produtos key=i item=produto}
-                            {if $dados.id_pedido == $produto.id_pedido}
-                                {$produto.nome_produto}<br>
-                            {/if}
+                                {if $dados.id_pedido == $produto.id_pedido}
+                                {$produto.nome_produto}
+                                    {if $produto.obs}
+                                    <button type="button" class="badge badge-warning btn btn-warning btn-sm"
+                                        data-container="body" data-toggle="popover" data-placement="right"
+                                        data-content="{$produto.obs}">Obs</button>
+                                    {/if}<br>
+
+                                {/if}
                             {/foreach}
                         </td>
                         <td>{$dados.endereco}</td>
                         <td>{$dados.dt_entrega|date_format:'%Hh%M'}</td>
                         <td>{$dados.tipo_pagamento}</td>
-                        <td>R$ 
+                        <td>R$
                             {foreach from=$total_pedido key=i item=total_valor}
                                 {if $dados.id_pedido == $total_valor.id_pedido}
                                     {$total_valor.valor}
@@ -115,7 +121,8 @@
                         </td>
                         <td>
                             <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm sts_pedido" data-cod="{$dados.id_pedido}" id="muda_status{$dados.id_pedido}">
+                                <select class="col-lg-9 form-control input-sm sts_pedido" data-cod="{$dados.id_pedido}"
+                                    id="muda_status{$dados.id_pedido}">
                                     {foreach from=$lista_status_pedidos key=i item=status}
                                     <option {if $status.nome_status==$dados.status_pedido}selected{/if}
                                         value="{$status.id}">{$status.nome_status}</option>
@@ -132,35 +139,6 @@
                     </tr>
                     {/if}
                     {/foreach}
-                    <tr>
-                        <td>0007</td>
-                        <td>Sr. Barriga</td>
-                        <td>Feijoada<br>Refrigerante Hibisco<br>Salada de pote<button type="button"
-                                class="badge badge-warning btn btn-warning btn-sm" data-container="body"
-                                data-toggle="popover" data-placement="right"
-                                data-content="Sem borda por favor">Obs</button></td>
-                        <td>Anhangabaú</td>
-                        <td>12h45</td>
-                        <td>Na retirada</td>
-                        <td>R$ 28,00</td>
-                        <td>
-                            <div class="form-group mb-0">
-                                <select class="col-lg-9 form-control input-sm" id="exampleFormControlSelect1">
-
-                                    <option selected>Recebido</option>
-                                    <option>Saiu para entrega</option>
-                                    <option>Chegou no local de entrega</option>
-                                    <option>Cancelado</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
-                                <i class="fa fa-comment-alt icon-msg-pedidos"></i>
-                                <span class="badge bg-danger tem-msg">5</span>
-                            </a>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
