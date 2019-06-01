@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-01 17:38:07
+/* Smarty version 3.1.33, created on 2019-06-01 17:53:47
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\historico.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf29bdfe82f99_59039911',
+  'unifunc' => 'content_5cf29f8b66ecf4_35231383',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7cb806aa880ee55c3687c0c6283c4f6bf051061a' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\historico.tpl',
-      1 => 1559403481,
+      1 => 1559403544,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf29bdfe82f99_59039911 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf29f8b66ecf4_35231383 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel panel-headline">
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-12">
-                    <!-- RECENT PURCHASES -->
+
                     <div class="panel">
                         <div class="panel-heading">
                             <h3 class="panel-title"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
@@ -96,9 +96,8 @@ function content_5cf29bdfe82f99_59039911 (Smarty_Internal_Template $_smarty_tpl)
                             </div>
                         </div>
                     </div>
-                    <!-- END RECENT PURCHASES -->
-                </div>
 
+                </div>
             </div>
         </div>
     </div><?php }

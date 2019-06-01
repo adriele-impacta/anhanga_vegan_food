@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-01 17:36:12
+/* Smarty version 3.1.33, created on 2019-06-01 18:20:00
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf29b6c433135_15831918',
+  'unifunc' => 'content_5cf2a5b0e50b83_06660268',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1559403369,
+      1 => 1559405997,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf29b6c433135_15831918 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf2a5b0e50b83_06660268 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,14 +29,18 @@ function content_5cf29b6c433135_15831918 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
- 
+
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-vendor/chartist/css/chartist-custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/datatable/css/datatables.css" />
+
+    <?php if (isset($_smarty_tpl->tpl_vars['chartits']->value)) {?>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/chartist/css/chartist-custom.css">
+    <?php }?>
 
     <?php if (isset($_smarty_tpl->tpl_vars['upload_arquivo']->value)) {?>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
@@ -45,11 +49,12 @@ css/jquery.fileupload.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 css/main.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">-->
-    
+
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 img/icons/logo-cachorro.png">
+
     
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
@@ -71,6 +76,12 @@ js/klorofil-common.js"><?php echo '</script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
 vendor/datatable/js/datatables.js"><?php echo '</script'; ?>
 >
+    <?php if (isset($_smarty_tpl->tpl_vars['chartits']->value)) {?>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
+vendor/chartist/js/chartist.min.js"><?php echo '</script'; ?>
+>
+    <?php }?>
 </head>
 
 
@@ -82,11 +93,13 @@ vendor/datatable/js/datatables.js"><?php echo '</script'; ?>
             <div class="brand">
                 <a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
 index.php?pagina=pedidos"><img src="<?php echo $_smarty_tpl->tpl_vars['LIB_DIR']->value;?>
-img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
+img/logo-escrito.png" alt="Anhangá Logo"
+                        class="img-responsive logo-in"></a>
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
-                    <button type="button" class="btn-toggle-fullwidth"><i class="far fa-arrow-alt-circle-left"></i></button>
+                    <button type="button" class="btn-toggle-fullwidth"><i
+                            class="far fa-arrow-alt-circle-left"></i></button>
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
@@ -112,14 +125,16 @@ img/logo-escrito.png" alt="Anhangá Logo" class="img-responsive logo-in"></a>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_smarty_tpl->tpl_vars['nome_usuario']->value;?>
- <i class="icon-submenu fa fa-angle-down"></i></a>
+ <i
+                                    class="icon-submenu fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
                                                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=logout"><i class="lnr lnr-exit"></i> <span>Sair</span></a></li>
+index.php?pagina=logout"><i class="lnr lnr-exit"></i>
+                                        <span>Sair</span></a></li>
                             </ul>
                         </li>
-                    
+
                     </ul>
                 </div>
             </div>
@@ -159,14 +174,13 @@ index.php?pagina=categorias">Categorias</a></li>
                             </div>
                         </li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=eventos" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "eventos") {?>active<?php }?>"><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+index.php?pagina=eventos" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "eventos") {?>active<?php }?>"> <i class="fa fa-calendar"></i><span>Eventos</span></a></li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=relatorio" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "relatorio") {?>active<?php }?>"><i class="fa fa-chart-line"></i><span>Relatórios</span></a>
+index.php?pagina=relatorio" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "relatorio") {?>active<?php }?>"> <i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 
                         <li>
-                            <a href="#menu_usuarios" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "usuarios") {?>active<?php }?>"><i
-                                    class="fa fa-users"></i> <span>Usuários</span> <i
+                            <a href="#menu_usuarios" data-toggle="collapse" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "usuarios") {?>active<?php }?>"> <i class="fa fa-users"></i> <span>Usuários</span> <i
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">
                                 <ul class="nav">

@@ -124,6 +124,7 @@ class Telas extends Smarty
     public function relatorio()
     {
         global $smarty;
+        $smarty->assign("chartits", "true");
         $smarty->assign("nome_pagina", "Relatórios");
         $smarty->assign("menu_ativo", "relatorio");
         $smarty->assign("conteudo_pagina", "relatorio.tpl");
