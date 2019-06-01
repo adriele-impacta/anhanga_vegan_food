@@ -24,4 +24,20 @@ class PedidosView extends Base{
         $this->campoPk = "id";
     }
 
+    public function select_meses_anos()
+    {
+        $mes_ano = array();
+            $this->extrasSelect = "WHERE status_pedido != 'Cancelado' GROUP BY MONTH(dt_entrega), YEAR(dt_entrega);";
+            $this->selecionaCampos($this);
+            if ($this->linhasAfetadas > 0) {
+                while ($res = $this->retornaDados()) {
+                   // print_r($res);
+                    array_push($mes_ano, get_object_vars($res));
+                }
+                return $mes_ano;
+            
+                // print_r($mes_ano);
+            }
+    }
+
 }

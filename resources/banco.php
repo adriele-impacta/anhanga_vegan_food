@@ -1,10 +1,7 @@
 <?php
 abstract class Banco
 {
-    public $servidor = 'mnihouze.com.br';
-    public $usuario = 'mnihouze_usr_web';
-    public $senha = '$ej9j6ua';
-    public $nomeBanco = 'mnihouze_db_VEGAN';
+    
 
 
     public $conexao = null;
@@ -173,6 +170,7 @@ abstract class Banco
         if (!empty($objeto->extrasSelect)) {
             $sql .= " " . $objeto->extrasSelect;
         }
+       
         return $this->executaSQL($sql);
     }
 
