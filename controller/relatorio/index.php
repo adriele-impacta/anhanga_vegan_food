@@ -79,3 +79,21 @@ $smarty->assign("ano_output", array_unique($ano_values));
 $smarty->assign("ano_selected", $ano_atual);
 
 // date("YW", strtotime("2011-01-07"));
+
+
+$rel_pagemento = new PedidosView();
+$response_pagamento = $rel_pagemento->relatorio_tipo_pagamento();
+$dados_pagamento = array();
+foreach ($response_pagamento as $pg){
+    array_push($dados_pagamento, $pg);
+}
+$smarty->assign("dados_pagamento", $dados_pagamento);
+
+
+$rel_produtos = new ListaPedidoView();
+$response_produtos = $rel_produtos->relatorio_produtos();
+$dados_produtos = array();
+foreach ($response_produtos as $pd){
+    array_push($dados_produtos, $pd);
+}
+$smarty->assign("dados_produtos", $dados_produtos);

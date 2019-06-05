@@ -40,4 +40,21 @@ class PedidosView extends Base{
             }
     }
 
+    public function relatorio_tipo_pagamento($mes = null, $ano = null)
+    {
+        $total_tipo_pagamento = array();
+        
+        $filtro_mes = '';
+        $filtro_ano = '';
+
+
+        $this->selecionaAberto("SELECT COUNT(id_pedido) as total, tipo_pagamento FROM vw_pedido WHERE status_pedido != 'Cancelado' GROUP BY tipo_pagamento;");
+            if ($this->linhasAfetadas > 0) {
+                while ($res = $this->retornaDados()) {
+                    array_push($total_tipo_pagamento, get_object_vars($res));
+                }
+                return $total_tipo_pagamento;
+            }
+    }
+
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-02 01:30:23
+/* Smarty version 3.1.33, created on 2019-06-06 01:32:52
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\relatorio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf30a8fcbbbc1_63616185',
+  'unifunc' => 'content_5cf851245390f0_18270215',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'da9d3bbe92be9dbac319d334e7319812f5b9ec4e' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\relatorio.tpl',
-      1 => 1559431821,
+      1 => 1559777566,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf30a8fcbbbc1_63616185 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf851245390f0_18270215 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <div class="panel panel-headline">
@@ -44,7 +44,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_v
             </div>
             <div class="col-md-2 form-group">
                 <a type="button" href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=relatorio&" class="btn btn-primary btn-sm">Buscar</a>
+index.php?pagina=relatorio" class="btn btn-primary btn-sm">Buscar</a>
             </div>
         </div>
     </div>
@@ -71,12 +71,35 @@ index.php?pagina=relatorio&" class="btn btn-primary btn-sm">Buscar</a>
         </div>
     </div>
 </div>
-
 <?php echo '<script'; ?>
 >
     var data = {
-        labels: ['Bananas', 'Apples', 'Grapes'],
-        series: [20, 15, 40]
+        labels: [
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dados_pagamento']->value, 'pg', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['pg']->value) {
+?>
+                '<?php echo $_smarty_tpl->tpl_vars['pg']->value['tipo_pagamento'];
+if ($_smarty_tpl->tpl_vars['i']->value < count($_smarty_tpl->tpl_vars['dados_pagamento']->value)) {?>',<?php }?>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        ],
+        series: [
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dados_pagamento']->value, 'pg', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['pg']->value) {
+?>
+                <?php echo $_smarty_tpl->tpl_vars['pg']->value['total'];
+if ($_smarty_tpl->tpl_vars['i']->value < count($_smarty_tpl->tpl_vars['dados_pagamento']->value)) {?>,<?php }?>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        ]
     };
 
     var options = {
@@ -102,8 +125,32 @@ index.php?pagina=relatorio&" class="btn btn-primary btn-sm">Buscar</a>
     new Chartist.Pie('#pagamento-chart', data, options, responsiveOptions);
 
     new Chartist.Bar('#pratos-chart', {
-        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        series: [[5, 4, 3, 7, 5, 10, 3]]
+        labels: [
+             <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dados_produtos']->value, 'pd', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['pd']->value) {
+?>
+                '<?php echo $_smarty_tpl->tpl_vars['pd']->value['nome_produto'];
+if ($_smarty_tpl->tpl_vars['i']->value < count($_smarty_tpl->tpl_vars['dados_produtos']->value)) {?>',<?php }?>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        ],
+        series: [[
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dados_produtos']->value, 'pd', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['pd']->value) {
+?>
+                <?php echo $_smarty_tpl->tpl_vars['pd']->value['total'];
+if ($_smarty_tpl->tpl_vars['i']->value < count($_smarty_tpl->tpl_vars['dados_produtos']->value)) {?>,<?php }?>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        ]]
 
     }, {
             seriesBarDistance: 8,

@@ -2,12 +2,11 @@
 abstract class Banco
 {
     
-
+   
 
     public $conexao = null;
     public $dataset = null;
     public $linhasAfetadas = -1;
-
     // metodos
 
     public function __construct()
@@ -173,6 +172,13 @@ abstract class Banco
        
         return $this->executaSQL($sql);
     }
+
+
+    public function selecionaAberto($sql)
+    {       
+        return $this->executaSQL($sql);
+    }
+
 
     public function executaSQL($sql = null)
     {

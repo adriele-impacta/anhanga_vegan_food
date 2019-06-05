@@ -42,11 +42,18 @@
         </div>
     </div>
 </div>
-
 <script>
     var data = {
-        labels: ['Bananas', 'Apples', 'Grapes'],
-        series: [20, 15, 40]
+        labels: [
+            {foreach from=$dados_pagamento key=i item=pg}
+                '{$pg.tipo_pagamento}{if $i < $dados_pagamento|@count}',{/if}
+            {/foreach}
+        ],
+        series: [
+            {foreach from=$dados_pagamento key=i item=pg}
+                {$pg.total}{if $i < $dados_pagamento|@count},{/if}
+            {/foreach}
+        ]
     };
 
     var options = {
@@ -72,8 +79,16 @@
     new Chartist.Pie('#pagamento-chart', data, options, responsiveOptions);
 
     new Chartist.Bar('#pratos-chart', {
-        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        series: [[5, 4, 3, 7, 5, 10, 3]]
+        labels: [
+             {foreach from=$dados_produtos key=i item=pd}
+                '{$pd.nome_produto}{if $i < $dados_produtos|@count}',{/if}
+            {/foreach}
+        ],
+        series: [[
+            {foreach from=$dados_produtos key=i item=pd}
+                {$pd.total}{if $i < $dados_produtos|@count},{/if}
+            {/foreach}
+        ]]
 
     }, {
             seriesBarDistance: 8,
