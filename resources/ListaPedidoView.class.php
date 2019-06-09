@@ -24,7 +24,7 @@ class ListaPedidoView extends Base{
     public function relatorio_produtos()
     {
         $array_produtos = array();
-        $this->selecionaAberto("SELECT COUNT(nome_produto) as total, nome_produto FROM vw_lista_pedido GROUP BY nome_produto;");
+        $this->selecionaAberto("SELECT COUNT(nome_produto) as total, nome_produto FROM vw_lista_pedido GROUP BY nome_produto ORDER BY total DESC;");
             if ($this->linhasAfetadas > 0) {
                 while ($res = $this->retornaDados()) {
                     array_push($array_produtos, get_object_vars($res));

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-06 01:32:52
+/* Smarty version 3.1.33, created on 2019-06-09 02:32:36
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\relatorio.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf851245390f0_18270215',
+  'unifunc' => 'content_5cfc53a4eb10f9_03340291',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'da9d3bbe92be9dbac319d334e7319812f5b9ec4e' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\relatorio.tpl',
-      1 => 1559777566,
+      1 => 1560040352,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf851245390f0_18270215 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cfc53a4eb10f9_03340291 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <div class="panel panel-headline">
@@ -60,7 +60,9 @@ index.php?pagina=relatorio" class="btn btn-primary btn-sm">Buscar</a>
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+</div>
+<div class="row">
+<div class="col-md-6">
         <div class="panel">
             <div class="panel-heading">
                 <h3 class="panel-title">Pratos mais pedidos</h3>
@@ -70,7 +72,7 @@ index.php?pagina=relatorio" class="btn btn-primary btn-sm">Buscar</a>
             </div>
         </div>
     </div>
-</div>
+    </div>
 <?php echo '<script'; ?>
 >
     var data = {

@@ -15,50 +15,32 @@
                         </div>
                         <div class="panel-body no-padding">
                             <table class="table table-striped">
+
+
+
+
                                 <thead>
                                     <tr>
-                                        <th>Order No.</th>
-                                        <th>Name</th>
-                                        <th>Amount</th>
-                                        <th>Date &amp; Time</th>
+                                        <th>Cód.</th>
+                                        <th>Cliente</th>
+                                        <th>Produtos</th>
+                                        <th>Local</th>
+                                        <th>Tipo pagemento</th>
+                                        <th>Data & Hora</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {foreach from=$lista_produtos key=k item=v}
                                     <tr>
-                                        <td><a href="#">763648</a></td>
-                                        <td>Steve</td>
-                                        <td>$122</td>
-                                        <td>Oct 21, 2016</td>
-                                        <td><span class="label label-success">COMPLETED</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763649</a></td>
-                                        <td>Amber</td>
-                                        <td>$62</td>
-                                        <td>Oct 21, 2016</td>
-                                        <td><span class="label label-warning">PENDING</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763650</a></td>
-                                        <td>Michael</td>
-                                        <td>$34</td>
-                                        <td>Oct 18, 2016</td>
-                                        <td><span class="label label-danger">FAILED</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763651</a></td>
-                                        <td>Roger</td>
-                                        <td>$186</td>
-                                        <td>Oct 17, 2016</td>
-                                        <td><span class="label label-success">SUCCESS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763652</a></td>
-                                        <td>Smith</td>
-                                        <td>$362</td>
-                                        <td>Oct 16, 2016</td>
-                                        <td><span class="label label-success">SUCCESS</span></td>
+                                        <td><a href="#">{$v.id_pedido}</a></td>
+                                        <td>{$v.nome_completo}</td>
+                                        <td></td>
+                                        <td>{$v.tipo_pagamento}</td>
+                                        <td>{$v.endereco}</td>
+                                        <td>{$v.dt_entrega}</td>
+                                        <td><span class="label label-success">{$v.status_pedido}</span></td>
+                                    {/foreach}
                                     </tr>
                                 </tbody>
                             </table>

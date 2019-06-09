@@ -31,7 +31,9 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+</div>
+<div class="row">
+<div class="col-md-6">
         <div class="panel">
             <div class="panel-heading">
                 <h3 class="panel-title">Pratos mais pedidos</h3>
@@ -41,7 +43,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 <script>
     var data = {
         labels: [

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-01 17:53:47
+/* Smarty version 3.1.33, created on 2019-06-09 02:47:13
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\historico.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf29f8b66ecf4_35231383',
+  'unifunc' => 'content_5cfc5711243ae5_81930819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7cb806aa880ee55c3687c0c6283c4f6bf051061a' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\historico.tpl',
-      1 => 1559403544,
+      1 => 1560041225,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf29f8b66ecf4_35231383 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cfc5711243ae5_81930819 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel panel-headline">
         <div class="panel-body">
@@ -39,50 +39,45 @@ function content_5cf29f8b66ecf4_35231383 (Smarty_Internal_Template $_smarty_tpl)
                         </div>
                         <div class="panel-body no-padding">
                             <table class="table table-striped">
+
+
+
+
                                 <thead>
                                     <tr>
-                                        <th>Order No.</th>
-                                        <th>Name</th>
-                                        <th>Amount</th>
-                                        <th>Date &amp; Time</th>
+                                        <th>Cód.</th>
+                                        <th>Cliente</th>
+                                        <th>Produtos</th>
+                                        <th>Local</th>
+                                        <th>Tipo pagemento</th>
+                                        <th>Data & Hora</th>
                                         <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_produtos']->value, 'v', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
+?>
                                     <tr>
-                                        <td><a href="#">763648</a></td>
-                                        <td>Steve</td>
-                                        <td>$122</td>
-                                        <td>Oct 21, 2016</td>
-                                        <td><span class="label label-success">COMPLETED</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763649</a></td>
-                                        <td>Amber</td>
-                                        <td>$62</td>
-                                        <td>Oct 21, 2016</td>
-                                        <td><span class="label label-warning">PENDING</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763650</a></td>
-                                        <td>Michael</td>
-                                        <td>$34</td>
-                                        <td>Oct 18, 2016</td>
-                                        <td><span class="label label-danger">FAILED</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763651</a></td>
-                                        <td>Roger</td>
-                                        <td>$186</td>
-                                        <td>Oct 17, 2016</td>
-                                        <td><span class="label label-success">SUCCESS</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">763652</a></td>
-                                        <td>Smith</td>
-                                        <td>$362</td>
-                                        <td>Oct 16, 2016</td>
-                                        <td><span class="label label-success">SUCCESS</span></td>
+                                        <td><a href="#"><?php echo $_smarty_tpl->tpl_vars['v']->value['id_pedido'];?>
+</a></td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['nome_completo'];?>
+</td>
+                                        <td></td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['tipo_pagamento'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['endereco'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['dt_entrega'];?>
+</td>
+                                        <td><span class="label label-success"><?php echo $_smarty_tpl->tpl_vars['v']->value['status_pedido'];?>
+</span></td>
+                                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     </tr>
                                 </tbody>
                             </table>

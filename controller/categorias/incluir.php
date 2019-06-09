@@ -29,7 +29,7 @@ if (isset($send)) {
             $new_dir = LOC . 'imagens/categorias/' . $new_name;
             if (empty($errors) == true) {
                 if (move_uploaded_file($file_tmp, $new_dir)) {
-                    $produtos->setValor('imagem', $new_name);
+                    $categoria->setValor('imagem', $new_name);
 
                 } else {
                     echo "Erro upload de imagem";
@@ -38,7 +38,7 @@ if (isset($send)) {
                 print_r($errors);
             }
         } else {
-            $produtos->delCampo('imagem');
+            $categoria->delCampo('imagem');
         }
 
         $categoria->delCampo('id');
