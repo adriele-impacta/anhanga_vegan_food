@@ -5,6 +5,18 @@ require_once CLASSES_DIR . 'ListaPedidoView.class.php';
 $mesPost = filter_input(INPUT_POST, 'mesGrafico', FILTER_SANITIZE_NUMBER_INT);
 $anoPost = filter_input(INPUT_POST, 'anoGrafico', FILTER_SANITIZE_NUMBER_INT);
 
+$mes_atual = date("m");
+$ano_atual = date('Y');
+
+if(!$mesPost){
+    $mesPost = $mes_atual;
+}
+
+if(!$anoPost){
+    $anoPost = $ano_atual;
+}
+
+
 function num_to_mes($m){
     switch($m){
         case 1:
@@ -46,9 +58,6 @@ function num_to_mes($m){
     }
     return $nomeMes;
 }
-
-$mes_atual = date("m");
-$ano_atual = date('Y');
 
 $pedidos = new PedidosView();
 $pedidos->delCampo('id_pedido');
