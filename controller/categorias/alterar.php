@@ -46,7 +46,7 @@ if (isset($_GET['send'])) {
                 print_r($errors);
             }
         } else {
-            $produtos->delCampo('imagem');
+            $categoria->delCampo('imagem');
         }
 
         $categoria->delCampo('id');      

@@ -178,7 +178,7 @@ abstract class Banco
 
 
     public function selecionaAberto($sql)
-    {       
+    {     
         return $this->executaSQL($sql);
     }
 
