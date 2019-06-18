@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-09 02:47:13
+/* Smarty version 3.1.33, created on 2019-06-18 03:47:59
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\historico.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cfc5711243ae5_81930819',
+  'unifunc' => 'content_5d0842cf935ce7_95406492',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7cb806aa880ee55c3687c0c6283c4f6bf051061a' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\historico.tpl',
-      1 => 1560041225,
+      1 => 1560822472,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cfc5711243ae5_81930819 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0842cf935ce7_95406492 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel panel-headline">
         <div class="panel-body">
@@ -30,18 +30,10 @@ function content_5cfc5711243ae5_81930819 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="panel">
                         <div class="panel-heading">
                             <h3 class="panel-title"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
-</h3>
-                            <div class="right">
-                                <button type="button" class="btn-toggle-collapse"><i
-                                        class="lnr lnr-chevron-up"></i></button>
-                                <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-                            </div>
+</h3>                
                         </div>
                         <div class="panel-body no-padding">
                             <table class="table table-striped">
-
-
-
 
                                 <thead>
                                     <tr>
@@ -61,11 +53,25 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
                                     <tr>
-                                        <td><a href="#"><?php echo $_smarty_tpl->tpl_vars['v']->value['id_pedido'];?>
+                                        <td><a href="#">000<?php echo $_smarty_tpl->tpl_vars['v']->value['id_pedido'];?>
 </a></td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['nome_completo'];?>
 </td>
-                                        <td></td>
+                                        <td>
+                                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_pedido']->value, 'produto', false, 'i');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['produto']->value) {
+?>
+                                                <?php if ($_smarty_tpl->tpl_vars['produto']->value['id_pedido'] == $_smarty_tpl->tpl_vars['v']->value['id_pedido']) {?>
+                                                    <?php echo $_smarty_tpl->tpl_vars['produto']->value['nome_produto'];?>
+<br>
+                                                <?php }?>
+                                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                                        </td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['tipo_pagamento'];?>
 </td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['endereco'];?>

@@ -6,18 +6,10 @@
 
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="panel-title">{$nome_pagina}</h3>
-                            <div class="right">
-                                <button type="button" class="btn-toggle-collapse"><i
-                                        class="lnr lnr-chevron-up"></i></button>
-                                <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
-                            </div>
+                            <h3 class="panel-title">{$nome_pagina}</h3>                
                         </div>
                         <div class="panel-body no-padding">
                             <table class="table table-striped">
-
-
-
 
                                 <thead>
                                     <tr>
@@ -33,9 +25,15 @@
                                 <tbody>
                                     {foreach from=$lista_produtos key=k item=v}
                                     <tr>
-                                        <td><a href="#">{$v.id_pedido}</a></td>
+                                        <td><a href="#">000{$v.id_pedido}</a></td>
                                         <td>{$v.nome_completo}</td>
-                                        <td></td>
+                                        <td>
+                                            {foreach from=$lista_pedido key=i item=produto}
+                                                {if $produto.id_pedido == $v.id_pedido}
+                                                    {$produto.nome_produto}<br>
+                                                {/if}
+                                            {/foreach}
+                                        </td>
                                         <td>{$v.tipo_pagamento}</td>
                                         <td>{$v.endereco}</td>
                                         <td>{$v.dt_entrega}</td>

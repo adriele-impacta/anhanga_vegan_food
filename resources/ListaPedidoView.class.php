@@ -44,5 +44,16 @@ class ListaPedidoView extends Base{
             }
     }
 
+    public function lista_todos(){
+        $array = array();
+        $this->selecionaAberto("SELECT * FROM vw_lista_pedido ORDER BY id_pedido desc;");
+        if ($this->linhasAfetadas > 0) {
+            while ($res = $this->retornaDados()) {
+                array_push($array, get_object_vars($res));
+            }
+            return $array;
+        }
+    }
+
     
 }

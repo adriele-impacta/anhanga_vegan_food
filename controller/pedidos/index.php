@@ -2,6 +2,7 @@
 require_once CLASSES_DIR . 'PedidosView.class.php';
 require_once CLASSES_DIR . 'StatusPedido.class.php';
 require_once CLASSES_DIR . 'ListaPedidoView.class.php';
+require_once CLASSES_DIR . 'Chat.class.php';
 
 define('HOJE', date('Y-m-d'));
 $lista_dias_pedido = array();
@@ -55,6 +56,8 @@ foreach ($lista_pedidos as $i => $ped) {
         }
         $total_pedido[$i]['id_pedido'] = $lista_pedidos[$i]['id_pedido'];
         $total_pedido[$i]['valor'] =  $val;
+
+        
 }
 
 $smarty->assign('dt_hoje', HOJE);

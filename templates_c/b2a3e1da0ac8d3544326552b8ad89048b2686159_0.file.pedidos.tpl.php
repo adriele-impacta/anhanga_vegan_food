@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-01 16:58:40
+/* Smarty version 3.1.33, created on 2019-06-18 03:52:28
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf292a0031a34_13738283',
+  'unifunc' => 'content_5d0843dc7c4661_66184665',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1559401102,
+      1 => 1560822739,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf292a0031a34_13738283 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0843dc7c4661_66184665 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -122,7 +122,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars[
 ">
             <table id="table-<?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;
 echo $_smarty_tpl->tpl_vars['k']->value;?>
-" class="table table-striped table-sm clean-datatable">
+" class="table table-striped table-sm clean-table">
                 <thead>
                     <tr class="border-top-remove">
                         <th class="no-sort">#</th>

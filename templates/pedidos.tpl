@@ -76,7 +76,7 @@
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
         {foreach from=$lista_dias_pedido key=k item=v}
         <div class="tab-pane fade {if $k == 0}active in{/if}" id="tab{$k}" role="tabpanel" aria-labelledby="tab{$k}">
-            <table id="table-{$nome_pagina}{$k}" class="table table-striped table-sm clean-datatable">
+            <table id="table-{$nome_pagina}{$k}" class="table table-striped table-sm clean-table">
                 <thead>
                     <tr class="border-top-remove">
                         <th class="no-sort">#</th>
