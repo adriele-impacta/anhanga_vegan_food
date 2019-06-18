@@ -1,5 +1,5 @@
 <?php
-class ListaPedidoView extends Base{
+class Chat extends Base{
 
     public function __construct($campos=array()){
 
@@ -21,9 +21,9 @@ class ListaPedidoView extends Base{
         $this->campoPk = "id";
     }
 
-    public function recupera_msg($id_pedido){
+    public function recupera_msg(){
         $array = array();
-        $this->selecionaAberto("SELECT * FROM vw_tbl_chat WHERE id_pedido = $id_pedido AND dt_visualizacao = '';");
+        $this->selecionaAberto("SELECT id_pedido, COUNT(id) as total FROM vw_tbl_chat WHERE dt_visualizacao IS NULL GROUP BY id_pedido");
         if ($this->linhasAfetadas > 0) {
             while ($res = $this->retornaDados()) {
                 array_push($array, get_object_vars($res));
@@ -31,6 +31,4 @@ class ListaPedidoView extends Base{
             return $array;
         }
     }
-
-    
 }

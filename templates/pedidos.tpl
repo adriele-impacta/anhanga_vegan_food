@@ -72,7 +72,6 @@
         {/foreach}
     </ul>
 
-
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
         {foreach from=$lista_dias_pedido key=k item=v}
         <div class="tab-pane fade {if $k == 0}active in{/if}" id="tab{$k}" role="tabpanel" aria-labelledby="tab{$k}">
@@ -133,7 +132,11 @@
                         <td class="text-center" style="padding: 1.8% 0%;">
                             <a href="#" data-toggle="modal" data-target="#exampleModal">
                                 <i class="fa fa-comment-alt icon-msg-pedidos"></i>
-                                <span class="badge bg-danger tem-msg">5</span>
+                                {foreach from=$lista_chat key=k item=chat}
+                                    {if $dados.id_pedido == $chat.id_pedido}
+                                        <span class="badge bg-danger tem-msg">{$chat.total}</span>
+                                    {/if}
+                                {/foreach}
                             </a>
                         </td>
                     </tr>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-18 03:52:28
+/* Smarty version 3.1.33, created on 2019-06-18 05:30:59
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0843dc7c4661_66184665',
+  'unifunc' => 'content_5d085af3ecf850_82808267',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1560822739,
+      1 => 1560828652,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0843dc7c4661_66184665 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d085af3ecf850_82808267 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -109,7 +109,6 @@ echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['dt_entrega'
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </ul>
-
 
     <div class="tab-content border-left border-right border-bottom" id="myTabContent">
         <?php
@@ -216,7 +215,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <td class="text-center" style="padding: 1.8% 0%;">
                             <a href="#" data-toggle="modal" data-target="#exampleModal">
                                 <i class="fa fa-comment-alt icon-msg-pedidos"></i>
-                                <span class="badge bg-danger tem-msg">5</span>
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_chat']->value, 'chat', false, 'k');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['chat']->value) {
+?>
+                                    <?php if ($_smarty_tpl->tpl_vars['dados']->value['id_pedido'] == $_smarty_tpl->tpl_vars['chat']->value['id_pedido']) {?>
+                                        <span class="badge bg-danger tem-msg"><?php echo $_smarty_tpl->tpl_vars['chat']->value['total'];?>
+</span>
+                                    <?php }?>
+                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </a>
                         </td>
                     </tr>
