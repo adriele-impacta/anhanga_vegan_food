@@ -1,10 +1,12 @@
 <?php
+define('HOJE', date('Y-m-d'));
+
 require_once CLASSES_DIR . 'PedidosView.class.php';
 require_once CLASSES_DIR . 'StatusPedido.class.php';
 require_once CLASSES_DIR . 'ListaPedidoView.class.php';
 require_once CLASSES_DIR . 'Chat.class.php';
 
-define('HOJE', date('Y-m-d'));
+
 $lista_dias_pedido = array();
 
 $total_pedidos_hoje = 0;
@@ -18,6 +20,8 @@ while ($res = $dias_pedido->retornaDados()) {
 
 $chat = new Chat();
 $lista_chat = $chat->recupera_msg();
+
+$lista_mensagens_chat = $chat->recupera_msg_by_id();
 
 $lista_pedidos = array();
 $pedidos = new PedidosView();
@@ -79,3 +83,4 @@ $smarty->assign('total_vendido', $total_vendido);
 
 $smarty->assign('pendente', $pendente);
 $smarty->assign('lista_chat', $lista_chat);
+$smarty->assign('lista_mensagens_chat', $lista_mensagens_chat);

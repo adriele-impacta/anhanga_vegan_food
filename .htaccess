@@ -1,0 +1,10 @@
+AddDefaultCharset Off
+
+RewriteEngine on
+RewriteRule ^lib - [L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([^/]*)$ index.php?pagina=$1 [L]
+RewriteRule ^([^/]*)/([^/]*) index.php?pagina=$1&acao=$2 [L]

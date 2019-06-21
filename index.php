@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html; charset=utf-8", true);
 require_once './resources/Base.class.php';
 require_once './configs/config.php';
 require_once CLASSES_DIR . 'Telas.class.php';

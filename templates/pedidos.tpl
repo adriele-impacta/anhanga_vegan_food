@@ -1,4 +1,5 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+{foreach from=$lista_pedidos key=i item=modal}
+<div class="modal fade" id="modal{$modal.id_pedido}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -9,7 +10,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                Olá, estou chegando na estação.
+                    {foreach from=$lista_mensagens_chat key=i item=msg}
+                        {if $msg.id_pedido == $modal.id_pedido}
+                            {$msg.mensagem}<br>
+                        {/if}
+                    {/foreach}
                 <div class="form-group">
                     <hr>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -22,6 +27,10 @@
         </div>
     </div>
 </div>
+{/foreach}
+
+
+
 
 <div class="panel panel-headline">
     <div class="panel-heading">
@@ -97,15 +106,15 @@
                         <td>{$dados.nome_completo}</td>
                         <td>
                             {foreach from=$lista_produtos key=i item=produto}
-                                {if $dados.id_pedido == $produto.id_pedido}
-                                {$produto.nome_produto}
-                                    {if $produto.obs}
-                                    <button type="button" class="badge badge-warning btn btn-warning btn-sm"
-                                        data-container="body" data-toggle="popover" data-placement="right"
-                                        data-content="{$produto.obs}">Obs</button>
-                                    {/if}<br>
+                            {if $dados.id_pedido == $produto.id_pedido}
+                            {$produto.nome_produto}
+                            {if $produto.obs}
+                            <button type="button" class="badge badge-warning btn btn-warning btn-sm"
+                                data-container="body" data-toggle="popover" data-placement="right"
+                                data-content="{$produto.obs}">Obs</button>
+                            {/if}<br>
 
-                                {/if}
+                            {/if}
                             {/foreach}
                         </td>
                         <td>{$dados.endereco}</td>
@@ -113,9 +122,9 @@
                         <td>{$dados.tipo_pagamento}</td>
                         <td>R$
                             {foreach from=$total_pedido key=i item=total_valor}
-                                {if $dados.id_pedido == $total_valor.id_pedido}
-                                    {$total_valor.valor}
-                                {/if}
+                            {if $dados.id_pedido == $total_valor.id_pedido}
+                            {$total_valor.valor}
+                            {/if}
                             {/foreach}
                         </td>
                         <td>
@@ -130,7 +139,7 @@
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal">
+                            <a href="#" data-toggle="modal" data-target="#modal{$dados.id_pedido}">
                                 <i class="fa fa-comment-alt icon-msg-pedidos"></i>
                                 {foreach from=$lista_chat key=k item=chat}
                                     {if $dados.id_pedido == $chat.id_pedido}

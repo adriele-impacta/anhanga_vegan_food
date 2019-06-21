@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-18 03:47:59
+/* Smarty version 3.1.33, created on 2019-06-18 05:37:42
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\historico.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0842cf935ce7_95406492',
+  'unifunc' => 'content_5d085c86c59795_14831793',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7cb806aa880ee55c3687c0c6283c4f6bf051061a' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\historico.tpl',
-      1 => 1560822472,
+      1 => 1560826335,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d0842cf935ce7_95406492 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d085c86c59795_14831793 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel panel-headline">
         <div class="panel-body">
