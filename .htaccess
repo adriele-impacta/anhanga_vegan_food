@@ -8,3 +8,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^([^/]*)$ index.php?pagina=$1 [L]
 RewriteRule ^([^/]*)/([^/]*) index.php?pagina=$1&acao=$2 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/0-9]) index.php?pagina=$1&acao=$2&id=$3 [L]

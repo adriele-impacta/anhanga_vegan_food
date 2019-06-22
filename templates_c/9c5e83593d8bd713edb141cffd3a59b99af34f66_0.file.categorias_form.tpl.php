@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-01 17:04:38
+/* Smarty version 3.1.33, created on 2019-06-22 04:12:49
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\categorias_form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf2940646b002_86973590',
+  'unifunc' => 'content_5d0d8ea1086793_38902469',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9c5e83593d8bd713edb141cffd3a59b99af34f66' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\categorias_form.tpl',
-      1 => 1559401474,
+      1 => 1561169560,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf2940646b002_86973590 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0d8ea1086793_38902469 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['msg_retorno']->value)) {?>
 <div class="alert alert-<?php echo $_smarty_tpl->tpl_vars['class_retorno']->value;?>
 " role="alert"><?php echo $_smarty_tpl->tpl_vars['msg_retorno']->value;?>
@@ -36,9 +36,9 @@ if (isset($_smarty_tpl->tpl_vars['msg_retorno']->value)) {?>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=pedidos">Home</a></li>
+pedidos">Home</a></li>
         <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=categorias"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
+categorias"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 </a></li>
         <li class="breadcrumb-item active" aria-current="page"><?php echo $_smarty_tpl->tpl_vars['acao_pagina']->value;?>
 </li>
@@ -80,7 +80,7 @@ categorias/<?php echo $_smarty_tpl->tpl_vars['imagem']->value;?>
 
         <div class="form-group">
           <a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=categorias" class="btn btn-primary">Voltar</a>
+categorias" class="btn btn-primary">Voltar</a>
           <button type="submit" id="frmSaveButton" class="btn btn-primary">Salvar</button>
         </div>
       </form>

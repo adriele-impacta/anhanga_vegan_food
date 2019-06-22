@@ -99,8 +99,8 @@ switch ($pagina) {
 
     case 'logout':
         session_destroy();
-        header('Location: ' . URL . 'index.php?pagina=home');
+        header('Location: ' . URL . 'home');
         
     case 'notsession':
-        header('Location: ' . URL . 'index.php?pagina=home');
+        header('Location: ' . URL . 'home');
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-05-26 23:36:20
+/* Smarty version 3.1.33, created on 2019-06-22 04:45:26
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\eventos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ceb06d48d4fd7_83582834',
+  'unifunc' => 'content_5d0d9646dd1845_90699841',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bee4b3d2e00ae71d16868420b8f6edcc3c66b9a6' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\eventos.tpl',
-      1 => 1558906578,
+      1 => 1561171494,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ceb06d48d4fd7_83582834 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0d9646dd1845_90699841 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel">
     <div class="panel-body">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=pedidos">Home</a></li>
+pedidos">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $_smarty_tpl->tpl_vars['nome_pagina']->value;?>
 </li>
             </ol>
@@ -36,7 +36,7 @@ index.php?pagina=pedidos">Home</a></li>
 </h3>
             <div class="btn-toolbar mb-2 mb-md-0">
                 <a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=eventos&acao=incluir" class="btn btn-success btn-sm">
+eventos/incluir" class="btn btn-success btn-sm">
                     <i class="fa fa-plus"></i> Adicionar
                 </a>
             </div>

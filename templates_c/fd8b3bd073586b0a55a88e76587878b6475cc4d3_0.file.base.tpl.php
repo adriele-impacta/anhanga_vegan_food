@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-01 18:20:00
+/* Smarty version 3.1.33, created on 2019-06-22 01:28:04
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf2a5b0e50b83_06660268',
+  'unifunc' => 'content_5d0d6804d26973_99889041',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd8b3bd073586b0a55a88e76587878b6475cc4d3' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\base.tpl',
-      1 => 1559405997,
+      1 => 1561159660,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cf2a5b0e50b83_06660268 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0d6804d26973_99889041 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pt-br">
 
@@ -103,25 +103,7 @@ img/logo-escrito.png" alt="Anhangá Logo"
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                <i class="fa fa-bell"></i>
-                                <span class="badge bg-danger">5</span>
-                            </a>
-                            <ul class="dropdown-menu notifications">
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System
-                                        space is almost full</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9
-                                        unfinished tasks</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly
-                                        report is available</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly
-                                        meeting in 1 hour</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your
-                                        request has been approved</a></li>
-                                <li><a href="#" class="more">See all notifications</a></li>
-                            </ul>
-                        </li>
+                       
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_smarty_tpl->tpl_vars['nome_usuario']->value;?>
@@ -130,7 +112,7 @@ img/logo-escrito.png" alt="Anhangá Logo"
                             <ul class="dropdown-menu">
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
                                                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=logout"><i class="lnr lnr-exit"></i>
+logout"><i class="lnr lnr-exit"></i>
                                         <span>Sair</span></a></li>
                             </ul>
                         </li>
@@ -151,13 +133,13 @@ index.php?pagina=logout"><i class="lnr lnr-exit"></i>
                             <div id="menu_pedidos" class="collapse">
                                 <ul class="nav">
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=pedidos">Pedidos</a></li>
+pedidos">Pedidos</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=historico">Histórico de Pedidos</a></li>
+historico">Histórico de Pedidos</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=tipo_pagamento">Tipo de pagamento</a></li>
+tipo_pagamento">Tipo de pagamento</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=status_pedido">Status do pedido</a></li>
+status_pedido">Status do pedido</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -167,16 +149,16 @@ index.php?pagina=status_pedido">Status do pedido</a></li>
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=produtos">Novo produto</a></li>
+produtos">Novo produto</a></li>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=categorias">Categorias</a></li>
+categorias">Categorias</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=eventos" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "eventos") {?>active<?php }?>"> <i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+eventos" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "eventos") {?>active<?php }?>"> <i class="fa fa-calendar"></i><span>Eventos</span></a></li>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=relatorio" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "relatorio") {?>active<?php }?>"> <i class="fa fa-chart-line"></i><span>Relatórios</span></a>
+relatorio" class="collapsed <?php if ($_smarty_tpl->tpl_vars['menu_ativo']->value == "relatorio") {?>active<?php }?>"> <i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 
                         <li>
@@ -184,10 +166,8 @@ index.php?pagina=relatorio" class="collapsed <?php if ($_smarty_tpl->tpl_vars['m
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=usr_app">Aplicativo</a></li>
-                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['URL']->value;?>
-index.php?pagina=usr_adm">Administrativo</a></li>
+                                    <li><a href="usr_app">Aplicativo</a></li>
+                                    <li><a href="usr_adm">Administrativo</a></li>
                                 </ul>
                             </div>
                         </li>

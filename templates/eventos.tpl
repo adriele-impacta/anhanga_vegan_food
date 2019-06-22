@@ -2,14 +2,14 @@
     <div class="panel-body">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{$URL}index.php?pagina=pedidos">Home</a></li>
+                <li class="breadcrumb-item"><a href="{$URL}pedidos">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{$nome_pagina}</li>
             </ol>
         </nav>
         <div class="d-flex justify-content-between">
             <h3 class="page-title">{$nome_pagina}</h3>
             <div class="btn-toolbar mb-2 mb-md-0">
-                <a href="{$URL}index.php?pagina=eventos&acao=incluir" class="btn btn-success btn-sm">
+                <a href="{$URL}eventos/incluir" class="btn btn-success btn-sm">
                     <i class="fa fa-plus"></i> Adicionar
                 </a>
             </div>

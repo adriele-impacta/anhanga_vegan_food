@@ -9,8 +9,8 @@
   <div class="panel-body">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{$URL}index.php?pagina=pedidos">Home</a></li>
-        <li class="breadcrumb-item"><a href="{$URL}index.php?pagina=categorias">{$nome_pagina}</a></li>
+        <li class="breadcrumb-item"><a href="{$URL}pedidos">Home</a></li>
+        <li class="breadcrumb-item"><a href="{$URL}categorias">{$nome_pagina}</a></li>
         <li class="breadcrumb-item active" aria-current="page">{$acao_pagina}</li>
       </ol>
     </nav>

@@ -53,25 +53,7 @@
                 </div>
                 <div id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                                <i class="fa fa-bell"></i>
-                                <span class="badge bg-danger">5</span>
-                            </a>
-                            <ul class="dropdown-menu notifications">
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System
-                                        space is almost full</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9
-                                        unfinished tasks</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly
-                                        report is available</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly
-                                        meeting in 1 hour</a></li>
-                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your
-                                        request has been approved</a></li>
-                                <li><a href="#" class="more">See all notifications</a></li>
-                            </ul>
-                        </li>
+                       
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{$nome_usuario} <i
@@ -80,7 +62,7 @@
                                 <li><a href="#"><i class="lnr lnr-user"></i> <span>Meu perfil</span></a></li>
                                 {*<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
                                 <li><a href="#"><i class="lnr lnr-cog"></i> <span>Alterar Senha</span></a></li>*}
-                                <li><a href="{$URL}index.php?pagina=logout"><i class="lnr lnr-exit"></i>
+                                <li><a href="{$URL}logout"><i class="lnr lnr-exit"></i>
                                         <span>Sair</span></a></li>
                             </ul>
                         </li>
@@ -100,10 +82,10 @@
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_pedidos" class="collapse">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=pedidos">Pedidos</a></li>
-                                    <li><a href="{$URL}index.php?pagina=historico">Histórico de Pedidos</a></li>
-                                    <li><a href="{$URL}index.php?pagina=tipo_pagamento">Tipo de pagamento</a></li>
-                                    <li><a href="{$URL}index.php?pagina=status_pedido">Status do pedido</a></li>
+                                    <li><a href="{$URL}pedidos">Pedidos</a></li>
+                                    <li><a href="{$URL}historico">Histórico de Pedidos</a></li>
+                                    <li><a href="{$URL}tipo_pagamento">Tipo de pagamento</a></li>
+                                    <li><a href="{$URL}status_pedido">Status do pedido</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -112,13 +94,13 @@
                                 <i class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_produtos" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=produtos">Novo produto</a></li>
-                                    <li><a href="{$URL}index.php?pagina=categorias">Categorias</a></li>
+                                    <li><a href="{$URL}produtos">Novo produto</a></li>
+                                    <li><a href="{$URL}categorias">Categorias</a></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="{$URL}index.php?pagina=eventos" class="collapsed {if $menu_ativo == "eventos"}active{/if}"> <i class="fa fa-calendar"></i><span>Eventos</span></a></li>
-                        <li><a href="{$URL}index.php?pagina=relatorio" class="collapsed {if $menu_ativo == "relatorio"}active{/if}"> <i class="fa fa-chart-line"></i><span>Relatórios</span></a>
+                        <li><a href="{$URL}eventos" class="collapsed {if $menu_ativo == "eventos"}active{/if}"> <i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+                        <li><a href="{$URL}relatorio" class="collapsed {if $menu_ativo == "relatorio"}active{/if}"> <i class="fa fa-chart-line"></i><span>Relatórios</span></a>
                         </li>
 
                         <li>
@@ -126,8 +108,8 @@
                                     class="icon-submenu lnr lnr-chevron-left"></i></a>
                             <div id="menu_usuarios" class="collapse ">
                                 <ul class="nav">
-                                    <li><a href="{$URL}index.php?pagina=usr_app">Aplicativo</a></li>
-                                    <li><a href="{$URL}index.php?pagina=usr_adm">Administrativo</a></li>
+                                    <li><a href="usr_app">Aplicativo</a></li>
+                                    <li><a href="usr_adm">Administrativo</a></li>
                                 </ul>
                             </div>
                         </li>

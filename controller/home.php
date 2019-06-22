@@ -18,7 +18,7 @@ if ($enviado) {
         $_SESSION['login'] = $login->login;
         $_SESSION['nome_logado'] = $dados_session->nome_completo;
         
-        header('Location: ' . URL . 'index.php?pagina=pedidos');
+        header('Location: ' . URL . 'pedidos');
     } else {
         $smarty->assign("feedback", "Usuário e/ou senha inválido.");
         $smarty->assign("class_erro", "is-invalid");
