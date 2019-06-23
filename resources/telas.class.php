@@ -13,6 +13,7 @@ $smarty->assign("LIB_DIR", LIB_DIR);
 $smarty->assign("IMG_DIR", IMG_DIR);
 if(isset($nome_usuario)){
     $smarty->assign("nome_usuario", $nome_usuario);
+    $smarty->assign("login_usuario", $login_usuario);
 }
 $smarty->assign("ano", date('Y'));
 class Telas extends Smarty
@@ -62,7 +63,7 @@ class Telas extends Smarty
         $smarty->assign("nome_pagina", "Pedidos");
         $smarty->assign("menu_ativo", "pedidos");
 
-        if($acao !== "muda_status"){
+        if($acao !== "muda_status" && $acao !== 'chat'){
             $smarty->assign("conteudo_pagina", "pedidos.tpl");
             $smarty->display("base.tpl");
         }

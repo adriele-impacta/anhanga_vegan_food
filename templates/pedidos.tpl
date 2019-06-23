@@ -1,36 +1,4 @@
-{foreach from=$lista_pedidos key=i item=modal}
-<div class="modal fade" id="modal{$modal.id_pedido}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Mensagem de Cris Telis</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                    {foreach from=$lista_mensagens_chat key=i item=msg}
-                        {if $msg.id_pedido == $modal.id_pedido}
-                            {$msg.mensagem}<br>
-                        {/if}
-                    {/foreach}
-                <div class="form-group">
-                    <hr>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
-                <button type="button" class="btn btn-primary"><span data-feather="send"></span> Enviar</button>
-            </div>
-        </div>
-    </div>
-</div>
-{/foreach}
-
-
-
+{include file='chat.tpl'}
 
 <div class="panel panel-headline">
     <div class="panel-heading">
@@ -139,7 +107,7 @@
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#modal{$dados.id_pedido}">
+                            <a href="#" data-toggle="modal" class="ver_chat" data-target="#modal{$dados.id_pedido}" id="{$dados.id_pedido}">
                                 <i class="fa fa-comment-alt icon-msg-pedidos"></i>
                                 {foreach from=$lista_chat key=k item=chat}
                                     {if $dados.id_pedido == $chat.id_pedido}
@@ -157,3 +125,21 @@
         {/foreach}
     </div>
 </div>
+<script>
+$('.ver_chat').on('click', function(){
+    var id_p = $(this).attr('id');
+    $.ajax({
+        url: url + 'index.php?pagina=pedidos&acao=chat',
+        type: 'POST',
+        data: { id_p: id_p },
+        dataType: 'JSON'
+    }).done(function (response) {     
+        if (response.sts == 1) {
+            $('.tem-msg').remove();
+        }
+        else {
+          
+        }
+    });
+});
+</script>

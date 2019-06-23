@@ -24,8 +24,9 @@ class Chat extends Base
 
     public function recupera_msg()
     {
+        $login_usuario = $_SESSION['login'];
         $array = array();
-        $this->selecionaAberto("SELECT id_pedido, COUNT(id) as total FROM vw_tbl_chat WHERE dt_visualizacao IS NULL GROUP BY id_pedido;");
+        $this->selecionaAberto("SELECT id_pedido, COUNT(id) as total FROM vw_tbl_chat WHERE dt_visualizacao IS NULL OR dt_visualizacao = '0000-00-00 00:00:00' AND usuario != '$login_usuario' GROUP BY id_pedido;");
         if ($this->linhasAfetadas > 0) {
             while ($res = $this->retornaDados()) {
                 array_push($array, get_object_vars($res));
@@ -34,15 +35,22 @@ class Chat extends Base
         }
     }
 
-    public function recupera_msg_by_id()
+    public function lista_msgs()
     {
         $array = array();
-        $this->selecionaAberto("SELECT * FROM vw_tbl_chat WHERE dt_visualizacao IS NULL;");
+        $this->selecionaAberto("SELECT * FROM vw_tbl_chat;");
         if ($this->linhasAfetadas > 0) {
             while ($res = $this->retornaDados()) {
                 array_push($array, get_object_vars($res));
             }
             return $array;
         }
+    }
+
+    public function update_view($id_pedido)
+    {
+        $hoje = date('Y-m-d H:i:s');
+        $this->selecionaAberto("UPDATE vw_tbl_chat SET dt_visualizacao = '$hoje' WHERE dt_visualizacao IS NULL AND id_pedido = $id_pedido;");
+
     }
 }

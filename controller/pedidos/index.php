@@ -21,13 +21,12 @@ while ($res = $dias_pedido->retornaDados()) {
 $chat = new Chat();
 $lista_chat = $chat->recupera_msg();
 
-$lista_mensagens_chat = $chat->recupera_msg_by_id();
+$lista_mensagens_chat = $chat->lista_msgs();
 
 $lista_pedidos = array();
 $pedidos = new PedidosView();
 $pedidos->selecionaTudo($pedidos);
 while ($res = $pedidos->retornaDados()) {
-
         //  $idPedido = $res->id_pedido;
         $total_pedidos_hoje++;
         array_push($lista_pedidos, get_object_vars($res)); //stdObject para array
@@ -65,7 +64,7 @@ foreach ($lista_pedidos as $i => $ped) {
                 }
         }
         $total_pedido[$i]['id_pedido'] = $lista_pedidos[$i]['id_pedido'];
-        $total_pedido[$i]['valor'] =  $val;
+        $total_pedido[$i]['valor'] = $val;
    
 }
 

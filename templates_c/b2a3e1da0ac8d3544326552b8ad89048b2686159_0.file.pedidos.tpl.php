@@ -1,75 +1,30 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-21 06:16:41
+/* Smarty version 3.1.33, created on 2019-06-23 22:31:16
   from 'F:\xampp\htdocs\anhanga_vegan_food\templates\pedidos.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0c5a2949d6d8_34619718',
+  'unifunc' => 'content_5d0fe194bdb648_29219198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b2a3e1da0ac8d3544326552b8ad89048b2686159' => 
     array (
       0 => 'F:\\xampp\\htdocs\\anhanga_vegan_food\\templates\\pedidos.tpl',
-      1 => 1561090549,
+      1 => 1561321868,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:chat.tpl' => 1,
   ),
 ),false)) {
-function content_5d0c5a2949d6d8_34619718 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0fe194bdb648_29219198 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'F:\\xampp\\htdocs\\anhanga_vegan_food\\lib\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_pedidos']->value, 'modal', false, 'i');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['modal']->value) {
+$_smarty_tpl->_subTemplateRender('file:chat.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-<div class="modal fade" id="modal<?php echo $_smarty_tpl->tpl_vars['modal']->value['id_pedido'];?>
-" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Mensagem de Cris Telis</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                    <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lista_mensagens_chat']->value, 'msg', false, 'i');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['i']->value => $_smarty_tpl->tpl_vars['msg']->value) {
-?>
-                        <?php if ($_smarty_tpl->tpl_vars['msg']->value['id_pedido'] == $_smarty_tpl->tpl_vars['modal']->value['id_pedido']) {?>
-                            <?php echo $_smarty_tpl->tpl_vars['msg']->value['mensagem'];?>
-<br>
-                        <?php }?>
-                    <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <div class="form-group">
-                    <hr>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>-->
-                <button type="button" class="btn btn-primary"><span data-feather="send"></span> Enviar</button>
-            </div>
-        </div>
-    </div>
-</div>
-<?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
-
-
 
 <div class="panel panel-headline">
     <div class="panel-heading">
@@ -236,7 +191,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </div>
                         </td>
                         <td class="text-center" style="padding: 1.8% 0%;">
-                            <a href="#" data-toggle="modal" data-target="#modal<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
+                            <a href="#" data-toggle="modal" class="ver_chat" data-target="#modal<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
+" id="<?php echo $_smarty_tpl->tpl_vars['dados']->value['id_pedido'];?>
 ">
                                 <i class="fa fa-comment-alt icon-msg-pedidos"></i>
                                 <?php
@@ -268,5 +224,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
-</div><?php }
+</div>
+<?php echo '<script'; ?>
+>
+$('.ver_chat').on('click', function(){
+    var id_p = $(this).attr('id');
+    $.ajax({
+        url: url + 'index.php?pagina=pedidos&acao=chat',
+        type: 'POST',
+        data: { id_p: id_p },
+        dataType: 'JSON'
+    }).done(function (response) {     
+        if (response.sts == 1) {
+            $('.tem-msg').remove();
+        }
+        else {
+          
+        }
+    });
+});
+<?php echo '</script'; ?>
+><?php }
 }
